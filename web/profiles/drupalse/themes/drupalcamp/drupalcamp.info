@@ -1,0 +1,19 @@
+name = DrupalCamp
+description = DrupalCamp theme
+core = 6.x
+engine = phptemplate
+
+;Panel layouts
+plugins[panels][layouts] = plugins/layouts
+plugins[panels][styles] = plugins/styles
+api[panels][styles][version] = 2
+
+;Stylesheets
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/grid.css
+
+stylesheets[all][] = css/typo.css
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/style.css
+
+
