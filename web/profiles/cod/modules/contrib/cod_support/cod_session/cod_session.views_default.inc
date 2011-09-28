@@ -317,10 +317,7 @@ function cod_session_views_default_views() {
     ),
   ));
   $handler->override_option('access', array(
-    'type' => 'role',
-    'role' => array(
-      '3' => 3,
-    ),
+    'type' => 'none',
   ));
   $handler->override_option('cache', array(
     'type' => 'none',

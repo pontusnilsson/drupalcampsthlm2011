@@ -18,6 +18,7 @@ function cod_base_strongarm() {
       'admin-create' => -1,
       'admin-account' => -1,
       'admin-menu' => 1,
+      'admin-devel' => -1,
       'menu-menu-conference-admin' => -1,
     ),
   );

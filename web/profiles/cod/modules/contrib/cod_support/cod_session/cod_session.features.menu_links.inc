@@ -39,7 +39,7 @@ function cod_session_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '1',
-    'weight' => '-48',
+    'weight' => '-46',
     'uuid' => '82568654-06d2-11e0-a3ab-29212d7dea21',
   );
   // Exported menu link: primary-links:program/session-schedule
@@ -54,9 +54,7 @@ function cod_session_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-50',
-    'parent_path' => 'node/2',
-    'parent_uuid' => '82568654-06d2-11e0-a3ab-29212d7dea21',
+    'weight' => '-48',
   );
   // Exported menu link: primary-links:program/sessions
   $menu_links['primary-links:program/sessions'] = array(
@@ -70,9 +68,7 @@ function cod_session_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
-    'parent_path' => 'node/2',
-    'parent_uuid' => '82568654-06d2-11e0-a3ab-29212d7dea21',
+    'weight' => '-47',
   );
   // Translatables
   // Included for use with string extractors like potx.
