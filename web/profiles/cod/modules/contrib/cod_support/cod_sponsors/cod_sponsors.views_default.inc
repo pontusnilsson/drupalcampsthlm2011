@@ -116,6 +116,11 @@ function cod_sponsors_views_default_views() {
       'field' => 'type',
       'relationship' => 'none',
     ),
+    'field_sponsorship_level_value_many_to_one' => array(
+      'id' => 'field_sponsorship_level_value_many_to_one',
+      'table' => 'node_data_field_sponsorship_level',
+      'field' => 'field_sponsorship_level_value_many_to_one',
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -838,6 +843,64 @@ function cod_sponsors_views_default_views() {
     ),
   ));
   $handler->override_option('items_per_page', 1);
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('block', 'Organizing sponsor Block', 'block_8');
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'sponsor' => 'sponsor',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'field_sponsorship_level_value_many_to_one' => array(
+      'operator' => 'or',
+      'value' => array(
+        'Organizing' => 'Organizing',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'field_sponsorship_level_value_many_to_one',
+      'table' => 'node_data_field_sponsorship_level',
+      'field' => 'field_sponsorship_level_value_many_to_one',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'status' => array(
+      'operator' => '=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status',
+      'table' => 'node',
+      'field' => 'status',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
 

@@ -334,115 +334,6 @@ function cod_session_views_default_views() {
     'schedule_interactive' => '0',
     'interactive_type' => '0',
   ));
-  $handler = $view->new_display('page', 'Schedule', 'page_1');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'schedule_item' => 'schedule_item',
-        'session' => 'session',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'field_accepted_value' => array(
-      'operator' => '=',
-      'value' => array(
-        'value' => '1',
-        'min' => '',
-        'max' => '',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'field_accepted_value',
-      'table' => 'node_data_field_accepted',
-      'field' => 'field_accepted_value',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'field_session_slot_nid' => array(
-      'operator' => 'not empty',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'field_session_slot_nid',
-      'table' => 'node_data_field_session_slot',
-      'field' => 'field_session_slot_nid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_session_room_nid' => array(
-      'operator' => 'not empty',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'field_session_room_nid',
-      'table' => 'node_data_field_session_room',
-      'field' => 'field_session_room_nid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('path', 'program/session-schedule/all');
-  $handler->override_option('menu', array(
-    'type' => 'default tab',
-    'title' => 'Session Schedule',
-    'description' => '',
-    'weight' => '0',
-    'name' => 'primary-links',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'normal',
-    'title' => 'Session schedule',
-    'description' => '',
-    'weight' => '0',
-    'name' => 'primary-links',
-  ));
   $handler = $view->new_display('block', 'Primary Sessions Block', 'block_1');
   $handler->override_option('block_description', 'Primary Sessions');
   $handler->override_option('block_caching', -1);
@@ -574,6 +465,27 @@ function cod_session_views_default_views() {
     'weight' => '0',
     'name' => 'navigation',
   ));
+  $handler = $view->new_display('panel_pane', 'Schedule (Pane)', 'panel_pane_1');
+  $handler->override_option('pane_title', '');
+  $handler->override_option('pane_description', '');
+  $handler->override_option('pane_category', array(
+    'name' => 'View panes',
+    'weight' => 0,
+  ));
+  $handler->override_option('allow', array(
+    'use_pager' => FALSE,
+    'items_per_page' => FALSE,
+    'offset' => FALSE,
+    'link_to_view' => FALSE,
+    'more_link' => FALSE,
+    'path_override' => FALSE,
+    'title_override' => FALSE,
+    'exposed_form' => FALSE,
+    'fields_override' => FALSE,
+  ));
+  $handler->override_option('argument_input', array());
+  $handler->override_option('link_to_view', 0);
+  $handler->override_option('inherit_panels_path', 0);
 
   $views[$view->name] = $view;
 
