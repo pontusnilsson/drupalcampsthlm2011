@@ -3,6 +3,8 @@ description = DrupalCamp theme
 core = 6.x
 engine = phptemplate
 
+base = precision
+
 ;Panel layouts
 plugins[panels][layouts] = plugins/layouts
 plugins[panels][styles] = plugins/styles
