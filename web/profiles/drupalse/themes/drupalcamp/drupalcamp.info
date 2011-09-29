@@ -11,9 +11,7 @@ api[panels][styles][version] = 2
 ;Stylesheets
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/grid.css
-
-stylesheets[all][] = css/typo.css
-stylesheets[all][] = css/layout.css
-stylesheets[all][] = css/style.css
+stylesheets[all][] = css/type.css
+stylesheets[all][] = css/styles.css
 
 
