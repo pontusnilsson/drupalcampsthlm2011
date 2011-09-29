@@ -156,10 +156,9 @@ function cod_sponsors_content_default_fields() {
     'active' => '1',
     'text_processing' => '0',
     'max_length' => '',
-    'allowed_values' => 'Platinum
+    'allowed_values' => 'Organizing
 Gold
 Silver
-Bronze
 Media',
     'allowed_values_php' => '',
     'widget' => array(

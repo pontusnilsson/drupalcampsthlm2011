@@ -413,22 +413,6 @@ function cod_community_views_default_views() {
     ),
     'default' => 'value_4',
   ));
-  $handler = $view->new_display('page', 'Community Page (primary)', 'page_1');
-  $handler->override_option('path', 'community');
-  $handler->override_option('menu', array(
-    'type' => 'normal',
-    'title' => 'Community',
-    'description' => 'Connect with attendees',
-    'weight' => '0',
-    'name' => 'primary-links',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
   $handler = $view->new_display('block', 'Block', 'block_1');
   $handler->override_option('fields', array(
     'picture' => array(
@@ -574,6 +558,27 @@ function cod_community_views_default_views() {
   ));
   $handler->override_option('block_description', 'Attendee block');
   $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('panel_pane', 'Community Pane (Primary)', 'panel_pane_1');
+  $handler->override_option('pane_title', '');
+  $handler->override_option('pane_description', '');
+  $handler->override_option('pane_category', array(
+    'name' => 'View panes',
+    'weight' => 0,
+  ));
+  $handler->override_option('allow', array(
+    'use_pager' => FALSE,
+    'items_per_page' => FALSE,
+    'offset' => FALSE,
+    'link_to_view' => FALSE,
+    'more_link' => FALSE,
+    'path_override' => FALSE,
+    'title_override' => FALSE,
+    'exposed_form' => FALSE,
+    'fields_override' => FALSE,
+  ));
+  $handler->override_option('argument_input', array());
+  $handler->override_option('link_to_view', 0);
+  $handler->override_option('inherit_panels_path', 0);
 
   $views[$view->name] = $view;
 
