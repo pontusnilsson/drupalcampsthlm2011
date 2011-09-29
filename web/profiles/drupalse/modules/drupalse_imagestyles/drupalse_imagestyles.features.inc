@@ -13,7 +13,7 @@ function drupalse_imagestyles_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '175',
+            'width' => '217',
             'height' => '',
             'upscale' => 0,
           ),
@@ -43,7 +43,7 @@ function drupalse_imagestyles_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '217',
+            'width' => '175',
             'height' => '',
             'upscale' => 0,
           ),

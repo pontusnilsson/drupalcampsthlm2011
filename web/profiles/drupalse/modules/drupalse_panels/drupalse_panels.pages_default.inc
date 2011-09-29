@@ -24,7 +24,7 @@ function drupalse_panels_default_page_manager_handlers() {
     'relationships' => array(),
   );
   $display = new panels_display;
-  $display->layout = 'precision_column_two';
+  $display->layout = 'dc_site';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -35,6 +35,8 @@ function drupalse_panels_default_page_manager_handlers() {
       'aside_beta' => NULL,
       'footer_alpha' => NULL,
       'footer_beta' => NULL,
+      'header' => NULL,
+      'footer' => NULL,
     ),
   );
   $display->cache = array();
@@ -43,7 +45,7 @@ function drupalse_panels_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass;
     $pane->pid = 'new-1';
-    $pane->panel = 'header_alpha';
+    $pane->panel = 'header';
     $pane->type = 'page_logo';
     $pane->subtype = 'page_logo';
     $pane->shown = TRUE;
@@ -57,7 +59,7 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-1'] = $pane;
-    $display->panels['header_alpha'][0] = 'new-1';
+    $display->panels['header'][0] = 'new-1';
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'main';
@@ -326,6 +328,29 @@ function drupalse_panels_default_page_manager_pages() {
     $display->panels['aside_beta'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
+    $pane->panel = 'aside_beta';
+    $pane->type = 'drupalse_twitter_content_type';
+    $pane->subtype = 'drupalse_twitter_content_type';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'item1' => '',
+      'item2' => NULL,
+      'override_title' => 0,
+      'override_title_text' => '',
+      'tag' => '#drupalsthlm',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['aside_beta'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
     $pane->panel = 'main';
     $pane->type = 'views';
     $pane->subtype = 'news';
@@ -354,10 +379,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-3'] = $pane;
-    $display->panels['main'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['main'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-4';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['drupalse_front'] = $page;
