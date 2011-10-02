@@ -12,13 +12,13 @@
 <?php endif; ?>
 
 <?php if (!empty($content['left'])): ?>
-  <div class="page-header-alpha grid-48 alpha omega">
+  <div class="page-main grid-4 alpha">
     <?php print $content['left']; ?>
   </div>
 <?php endif; ?>
 
 <?php if (!empty($content['main'])): ?>
-  <div class="page-main grid-36 alpha">
+  <div class="page-main grid-10 omega">
     <?php print $content['main']; ?>
   </div>
 <?php endif; ?>
