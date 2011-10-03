@@ -1,5 +1,6 @@
 core = "6.x"
 dependencies[] = "ctools"
+dependencies[] = "drupalse_blocks"
 dependencies[] = "drupalse_boxes"
 dependencies[] = "drupalse_twitter"
 dependencies[] = "page_manager"

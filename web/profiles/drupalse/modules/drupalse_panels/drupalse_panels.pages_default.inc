@@ -148,6 +148,26 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane->position = 1;
     $display->content['new-2'] = $pane;
     $display->panels['content'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Sub menu',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-3'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
