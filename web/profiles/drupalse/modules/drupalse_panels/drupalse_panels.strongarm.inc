@@ -66,7 +66,7 @@ function drupalse_panels_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panels_legacy_rendering_mode';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['panels_legacy_rendering_mode'] = $strongarm;
 
   return $export;

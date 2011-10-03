@@ -730,7 +730,7 @@ function drupalse_panels_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display;
-  $display->layout = 'precision_column_one';
+  $display->layout = 'dc_page';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -740,6 +740,10 @@ function drupalse_panels_default_page_manager_pages() {
       'main' => NULL,
       'footer_alpha' => NULL,
       'footer_beta' => NULL,
+      'navigation' => NULL,
+      'highlighted' => NULL,
+      'sidebar_left' => NULL,
+      'content' => NULL,
     ),
   );
   $display->cache = array();
@@ -748,7 +752,7 @@ function drupalse_panels_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass;
     $pane->pid = 'new-1';
-    $pane->panel = 'main';
+    $pane->panel = 'content';
     $pane->type = 'views';
     $pane->subtype = 'Sponsors';
     $pane->shown = TRUE;
@@ -777,10 +781,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-1'] = $pane;
-    $display->panels['main'][0] = 'new-1';
+    $display->panels['content'][0] = 'new-1';
     $pane = new stdClass;
     $pane->pid = 'new-2';
-    $pane->panel = 'main';
+    $pane->panel = 'content';
     $pane->type = 'views';
     $pane->subtype = 'Sponsors';
     $pane->shown = TRUE;
@@ -809,7 +813,27 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $display->content['new-2'] = $pane;
-    $display->panels['main'][1] = 'new-2';
+    $display->panels['content'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_sponsor';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-3'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
