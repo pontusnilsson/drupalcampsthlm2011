@@ -6,8 +6,10 @@ $plugin = array(
   'icon' => 'dc-page.png',
   'category' => 'Drupal Camp',
   'panels' => array(
-    'left' => t('Left'),
-    'main' => t('Main'),
+    'navigation' =>  t('Navigation'),
+    'highlighted' => t('Highlighted'),
+    'sidebar_left' => t('Sidebar Left'),
+    'content' => t('Content'),
   ),
 );
 

@@ -10,9 +10,10 @@ body {
   min-height: 820px;
 }
 
-.page-main  {
+.page-outer-wrapper  {
   background: url(../images/bg-white.png);
   border-radius: 10px;
+  width:1100px;
 }
 
 #navigation a {

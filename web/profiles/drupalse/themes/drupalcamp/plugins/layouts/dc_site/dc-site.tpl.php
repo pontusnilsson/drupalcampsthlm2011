@@ -8,28 +8,33 @@
  */
 ?>
 <div<?php print $css_id ? " id=\"$css_id\"" : ''; ?> class="page-wrapper clear-block">
-  
-  <div class="page container-14 clear-block">
+  <div class="site container-12 clear-block">
 	
     <?php if (!empty($content['header'])): ?>
-      <div class="page-closure grid-14">
+      <div class="site-header grid-12">
         <?php print $content['header']; ?>
+      </div>
+    <?php endif; ?>
+    
+    <?php if (!empty($content['navigation'])): ?>
+      <div class="site-navigation grid-12">
+        <?php print $content['navigation']; ?>
       </div>
     <?php endif; ?>
 	
     <?php if (!empty($content['main'])): ?>
-      <div class="page-body grid-14">
+      <div class="site-main grid-12">
         <?php print $content['main']; ?>
       </div>
     <?php endif; ?>
 
 	  <?php if (!empty($content['footer'])): ?>
-      <div class="page-closure grid-14">
+      <div class="site-footer grid-12">
         <?php print $content['footer']; ?>
       </div>
     <?php endif; ?>
 
   </div>
-</div>
+ </div>
 
  
