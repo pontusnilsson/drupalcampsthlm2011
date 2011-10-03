@@ -427,29 +427,13 @@ function drupalse_panels_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'sidebar_left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_registerpromo';
     $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'role',
-          'settings' => array(
-            'rids' => array(
-              0 => 2,
-            ),
-          ),
-          'context' => 'logged-in-user',
-          'not' => TRUE,
-        ),
-      ),
-    );
+    $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Register promo',
-      'title' => '',
-      'body' => '<a href="/user/register">Register to DrupalCamp Stockholm</a>',
-      'format' => '2',
-      'substitute' => TRUE,
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(

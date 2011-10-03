@@ -9,6 +9,19 @@ function drupalse_boxes_default_box() {
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'drupalse_registerpromo';
+  $box->plugin_key = 'simple';
+  $box->title = 'Sign up';
+  $box->description = 'Sign up promo';
+  $box->options = array(
+    'body' => 'Come to DrupalCamp. Register here.',
+    'format' => '1',
+  );
+  $export['drupalse_registerpromo'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'drupalse_sessionpromo';
   $box->plugin_key = 'simple';
   $box->title = 'Want to talk at DrupalCamp Stockholm?';
