@@ -7,7 +7,7 @@
  * there is not wrapper div by default.
  */
 ?>
-<div class="page-outer-wrapper ">
+<div class="drupalcamp-page-1 page-outer-wrapper ">
  <div class="page grid-12 push-1 clear-block">
 
 <?php if (!empty($css_id)): ?>
