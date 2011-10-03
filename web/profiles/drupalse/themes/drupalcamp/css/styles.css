@@ -3,6 +3,7 @@ body {
   margin: 0;
   background: #e9eae3 url(../images/bg-header.jpg) top center repeat-x;
   font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  line-height:1.2em;
 }
 
 #page {
@@ -104,3 +105,36 @@ margin: 8px 0;
     padding: 0;
 }
 
+
+/**
+ * Messages
+ */
+
+div.messages {
+  border: 7px solid;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+div.messages.message {
+  background: #CCC;
+  border-color: #777
+}
+
+div.messages.status {
+  background: #CFC;
+  border-color: #7D7;
+}
+
+div.messages.warning {
+  background: #FFD;
+  border-color: #F0C020;
+}
+
+div.messages.error {
+  background: #FCC;
+  border-color: #D77;
+}

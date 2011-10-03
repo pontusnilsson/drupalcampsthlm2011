@@ -71,15 +71,18 @@ function cod_news_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'date_format' => 'small',
-      'custom_date_format' => '',
+      'date_format' => 'custom',
+      'custom_date_format' => 'Y-m-d',
       'exclude' => 0,
       'id' => 'created',
       'table' => 'node',
       'field' => 'created',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
-    'teaser' => array(
+    'field_news_image_fid' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -102,13 +105,25 @@ function cod_news_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'image_plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
       'exclude' => 0,
-      'id' => 'teaser',
-      'table' => 'node_revisions',
-      'field' => 'teaser',
+      'id' => 'field_news_image_fid',
+      'table' => 'node_data_field_news_image',
+      'field' => 'field_news_image_fid',
+      'override' => array(
+        'button' => 'Override',
+      ),
       'relationship' => 'none',
     ),
-    'comment_count' => array(
+    'body' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -131,16 +146,13 @@ function cod_news_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'set_precision' => FALSE,
-      'precision' => 0,
-      'decimal' => '.',
-      'separator' => ',',
-      'prefix' => 'Comments: ',
-      'suffix' => '',
       'exclude' => 0,
-      'id' => 'comment_count',
-      'table' => 'node_comment_statistics',
-      'field' => 'comment_count',
+      'id' => 'body',
+      'table' => 'node_revisions',
+      'field' => 'body',
+      'override' => array(
+        'button' => 'Override',
+      ),
       'relationship' => 'none',
     ),
   ));
@@ -211,12 +223,46 @@ function cod_news_views_default_views() {
   $handler->override_option('empty', 'No news items have been published.');
   $handler->override_option('empty_format', '1');
   $handler->override_option('use_pager', '1');
-  $handler->override_option('row_plugin', 'node');
+  $handler->override_option('style_plugin', 'semanticviews_default');
+  $handler->override_option('style_options', array(
+    'group' => array(
+      'element_type' => 'h3',
+      'class' => 'title',
+    ),
+    'list' => array(
+      'element_type' => '',
+      'class' => '',
+    ),
+    'row' => array(
+      'element_type' => 'div',
+      'class' => 'news-item content-item',
+      'last_every_nth' => '0',
+      'first_class' => 'first',
+      'last_class' => 'last',
+      'striping_classes' => 'odd even',
+    ),
+  ));
+  $handler->override_option('row_plugin', 'semanticviews_fields');
   $handler->override_option('row_options', array(
-    'relationship' => 'none',
-    'build_mode' => 'teaser',
-    'links' => 1,
-    'comments' => 0,
+    'semantic_html' => array(
+      'title' => array(
+        'element_type' => 'h3',
+        'class' => 'title',
+      ),
+      'created' => array(
+        'element_type' => 'span',
+        'class' => 'date',
+      ),
+      'teaser' => array(
+        'element_type' => 'div',
+        'class' => '',
+      ),
+      'comment_count' => array(
+        'element_type' => 'div',
+        'class' => '',
+      ),
+    ),
+    'skip_blank' => 0,
   ));
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->override_option('path', 'blog');
@@ -249,6 +295,27 @@ function cod_news_views_default_views() {
   $handler->override_option('use_more_text', 'Blog archive');
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->override_option('pane_title', 'News (Pane)');
+  $handler->override_option('pane_description', '');
+  $handler->override_option('pane_category', array(
+    'name' => 'View panes',
+    'weight' => 0,
+  ));
+  $handler->override_option('allow', array(
+    'use_pager' => 0,
+    'items_per_page' => 'items_per_page',
+    'offset' => 0,
+    'link_to_view' => 0,
+    'more_link' => 0,
+    'path_override' => 0,
+    'title_override' => 0,
+    'exposed_form' => 0,
+    'fields_override' => 0,
+  ));
+  $handler->override_option('argument_input', array());
+  $handler->override_option('link_to_view', 0);
+  $handler->override_option('inherit_panels_path', 0);
 
   $views[$view->name] = $view;
 
