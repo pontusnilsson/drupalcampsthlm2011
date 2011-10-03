@@ -7,15 +7,15 @@
  * there is not wrapper div by default.
  */
 ?>
-<div class="page-outer-wrapper">
-<div class="page container-12 clear-block">
+<div class="page-outer-wrapper ">
+ <div class="page grid-12 push-1 clear-block">
 
 <?php if (!empty($css_id)): ?>
   <div id="<?php print $css_id; ?>" class="clear-block">
 <?php endif; ?>
     
 <?php if (!empty($content['navigation'])): ?>
-  <div class="page-navigation grid-12 alpha omega">
+  <div class="page-navigation grid-12 alpha omega ">
     <?php print $content['navigation']; ?>
   </div>
 <?php endif; ?>
@@ -33,11 +33,11 @@
 <?php endif; ?>
 
 <?php if (!empty($content['content'])): ?>
-  <div class="page-content grid-7 omega">
-    <?php print $content['content']; ?>
-  </div>
+<div class="page-content grid-8 omega">
+<?php print $content['content']; ?>
+</div>
 <?php endif; ?>
-
+  
 <?php if (!empty($css_id)): ?>
   </div>
 <?php endif; ?>

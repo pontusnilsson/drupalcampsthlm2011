@@ -15,5 +15,7 @@ stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/grid.css
 stylesheets[all][] = css/type.css
 stylesheets[all][] = css/styles.css
+; use this to check the regions
+stylesheets[all][] = css/regions.css
 
 

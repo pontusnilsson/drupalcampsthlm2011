@@ -1,6 +1,5 @@
 body {
   background: url("../images/bg-header.jpg") repeat-x scroll center top #E9EAE3;
-  font-family: Arial,Helvetica,'Helvetica Neue',sans-serif;
   margin: 0;
 }
 
@@ -10,10 +9,9 @@ body {
   min-height: 820px;
 }
 
-.page-outer-wrapper  {
-  background: url(../images/bg-white.png);
+.site-main {
+  background: url(../images/bg-white.png) 0px -10px;
   border-radius: 10px;
-  width:1100px;
 }
 
 #navigation a {
@@ -25,4 +23,18 @@ body {
 
 .page-header-alpha {
   margin: 40px 80px;
+}
+
+#navigation {
+  margin: 15px 0;
+  padding: 0 10px;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.page-main .panel-pane {
+  padding: 20px;
 }
