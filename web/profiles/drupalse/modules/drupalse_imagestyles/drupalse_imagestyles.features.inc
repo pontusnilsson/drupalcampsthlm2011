@@ -35,6 +35,21 @@ function drupalse_imagestyles_imagecache_default_presets() {
         ),
       ),
     ),
+    'drupalse_pagecontent' => array(
+      'presetname' => 'drupalse_pagecontent',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '544',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
     'drupalse_silver' => array(
       'presetname' => 'drupalse_silver',
       'actions' => array(

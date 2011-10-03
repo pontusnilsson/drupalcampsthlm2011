@@ -6,6 +6,10 @@ body {
   line-height:1.2em;
 }
 
+.pane-title {
+  color:#323232;
+}
+
 #page {
   background: url("../images/bg-triangles.png") no-repeat scroll 0 478px transparent;
   padding: 20px 10px;
