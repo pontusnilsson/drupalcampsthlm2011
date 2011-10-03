@@ -9,6 +9,64 @@ function drupalse_panels_default_page_manager_handlers() {
   $handler = new stdClass;
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'contact_user_panel_context';
+  $handler->task = 'contact_user';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'dc_page';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'navigation' => NULL,
+      'highlighted' => NULL,
+      'sidebar_left' => NULL,
+      'content' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass;
+    $pane->pid = 'new-1';
+    $pane->panel = 'content';
+    $pane->type = 'contact';
+    $pane->subtype = 'contact';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['content'][0] = 'new-1';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-1';
+  $handler->conf['display'] = $display;
+  $export['contact_user_panel_context'] = $handler;
+
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'node_view_panel_context';
   $handler->task = 'node_view';
   $handler->subtask = '';
@@ -300,6 +358,10 @@ function drupalse_panels_default_page_manager_pages() {
       'main' => NULL,
       'footer_alpha' => NULL,
       'footer_beta' => NULL,
+      'navigation' => NULL,
+      'highlighted' => NULL,
+      'sidebar_left' => NULL,
+      'content' => NULL,
     ),
   );
   $display->cache = array();
@@ -323,6 +385,26 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->position = 0;
     $display->content['new-1'] = $pane;
     $display->panels['content'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_registerpromo';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-2'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
@@ -455,8 +537,9 @@ function drupalse_panels_default_page_manager_pages() {
       'item1' => '',
       'item2' => NULL,
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'DrupalCamp Tweets',
       'tag' => '#drupalsthlm',
+      'items' => '10',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -843,6 +926,93 @@ function drupalse_panels_default_page_manager_pages() {
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['drupalse_sponsors'] = $page;
+
+  $page = new stdClass;
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'drupalse_user_bookmarks';
+  $page->task = 'page';
+  $page->admin_title = 'User bookmarks';
+  $page->admin_description = '';
+  $page->path = 'user/%user/bookmarks';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Bookmarks',
+    'name' => 'navigation',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array(
+    'user' => array(
+      'id' => 1,
+      'identifier' => 'User: ID',
+      'name' => 'uid',
+      'settings' => array(),
+    ),
+  );
+  $page->conf = array();
+  $page->default_handlers = array();
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_drupalse_user_bookmarks_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'drupalse_user_bookmarks';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'dc_page';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'navigation' => NULL,
+      'highlighted' => NULL,
+      'sidebar_left' => NULL,
+      'content' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass;
+    $pane->pid = 'new-1';
+    $pane->panel = 'content';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'flag_bookmarks_tab-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['content'][0] = 'new-1';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-1';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['drupalse_user_bookmarks'] = $page;
 
  return $pages;
 

@@ -24,7 +24,7 @@ function cod_session_default_page_manager_handlers() {
     'relationships' => array(),
   );
   $display = new panels_display;
-  $display->layout = 'onecol';
+  $display->layout = 'dc_page';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -37,6 +37,10 @@ function cod_session_default_page_manager_handlers() {
       'left' => NULL,
       'right' => NULL,
       'middle' => NULL,
+      'navigation' => NULL,
+      'highlighted' => NULL,
+      'sidebar_left' => NULL,
+      'content' => NULL,
     ),
   );
   $display->cache = array();
@@ -45,7 +49,7 @@ function cod_session_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass;
     $pane->pid = 'new-1';
-    $pane->panel = 'middle';
+    $pane->panel = 'content';
     $pane->type = 'views_panes';
     $pane->subtype = 'sessions_speaker_confirmation-panel_pane_1';
     $pane->shown = TRUE;
@@ -77,10 +81,10 @@ function cod_session_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+    $display->panels['content'][0] = 'new-1';
     $pane = new stdClass;
     $pane->pid = 'new-2';
-    $pane->panel = 'middle';
+    $pane->panel = 'content';
     $pane->type = 'user_profile';
     $pane->subtype = 'user_profile';
     $pane->shown = TRUE;
@@ -98,7 +102,7 @@ function cod_session_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $display->content['new-2'] = $pane;
-    $display->panels['middle'][1] = 'new-2';
+    $display->panels['content'][1] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
