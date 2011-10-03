@@ -1,6 +1,8 @@
+
 body {
-  background: url("../images/bg-header.jpg") repeat-x scroll center top #E9EAE3;
   margin: 0;
+  background: #e9eae3 url(../images/bg-header.jpg) top center repeat-x;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
 }
 
 #page {
@@ -12,29 +14,64 @@ body {
 .site-main {
   background: url(../images/bg-white.png) 0px -10px;
   border-radius: 10px;
+  padding-bottom: 2em;
+}
+
+.site-header {
+  margin: 50px 0;
+}
+
+#navigation li.first {
+  padding-left: 0;
 }
 
 #navigation a {
-  color: #666666;
-  line-height: 60px;
-  padding: 0 10px;
+  color: #666;
   text-decoration: none;
+  padding: 8px;
+  line-height: 18px;
 }
 
-.page-header-alpha {
-  margin: 40px 80px;
+#navigation a:hover {
+  color: #56A79E;
+  text-decoration:none;
 }
 
-#navigation {
-  margin: 15px 0;
-  padding: 0 10px;
-  background-color: #fff;
-  background: rgba(255, 255, 255, 0.8);
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+#navigation li {
+  padding: 0 20px;
+  font-size: 18px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-.page-main .panel-pane {
-  padding: 20px;
+#navigation li.first a {
+  padding-left: 35px;
+  background: url(../images/bg-nav-home.png) 0 0 no-repeat;
+}
+
+#navigation li.first a.active,
+#navigation li.first a:hover {
+  background-position: 0 -40px;
+}
+
+
+#navigation ul {
+  padding: 35px 0 25px 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#mission {
+  background: url(../images/bg-mission.png) top left no-repeat;
+  padding: 100px 120px 0 30px;
+  width: 422px; /* 572 - 120 - 30 */
+  height: 50px; /* 150 - 100 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-style: italic;
 }

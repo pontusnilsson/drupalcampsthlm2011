@@ -1103,7 +1103,6 @@ function cod_session_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('title', 'Sessions');
   $handler->override_option('css_class', 'view-grouped-list sessions-list');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 0);
@@ -1158,36 +1157,6 @@ function cod_session_views_default_views() {
     ),
     'separator' => '',
     'hide_empty' => 0,
-  ));
-  $handler = $view->new_display('page', 'Page: Accepted', 'page_1');
-  $handler->override_option('sorts', array(
-    'title' => array(
-      'order' => 'ASC',
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('title', 'Accepted sessions');
-  $handler->override_option('empty', 'Sessions have not yet been accepted.');
-  $handler->override_option('path', 'program/sessions/accepted');
-  $handler->override_option('menu', array(
-    'type' => 'default tab',
-    'title' => 'Accepted sessions',
-    'description' => '',
-    'weight' => '0',
-    'name' => 'primary-links',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'normal',
-    'title' => 'Sessions',
-    'description' => '',
-    'weight' => '0',
-    'name' => 'primary-links',
   ));
   $handler = $view->new_display('feed', 'Feed: Sessions All', 'feed_1');
   $handler->override_option('filters', array(
@@ -1843,7 +1812,28 @@ function cod_session_views_default_views() {
   ));
   $handler->override_option('block_description', 'Sessions: Speakers');
   $handler->override_option('block_caching', -1);
-  $handler = $view->new_display('page', 'Page: Proposed', 'page_2');
+  $handler = $view->new_display('panel_pane', 'Sessions proposals (Accepted)', 'panel_pane_1');
+  $handler->override_option('pane_title', 'Sessions proposals (Accepted)');
+  $handler->override_option('pane_description', '');
+  $handler->override_option('pane_category', array(
+    'name' => 'View panes',
+    'weight' => 0,
+  ));
+  $handler->override_option('allow', array(
+    'use_pager' => FALSE,
+    'items_per_page' => FALSE,
+    'offset' => FALSE,
+    'link_to_view' => FALSE,
+    'more_link' => FALSE,
+    'path_override' => FALSE,
+    'title_override' => FALSE,
+    'exposed_form' => FALSE,
+    'fields_override' => FALSE,
+  ));
+  $handler->override_option('argument_input', array());
+  $handler->override_option('link_to_view', 0);
+  $handler->override_option('inherit_panels_path', 0);
+  $handler = $view->new_display('panel_pane', 'Sessions proposals (Proposed)', 'panel_pane_2');
   $handler->override_option('filters', array(
     'type' => array(
       'operator' => 'in',
@@ -1968,22 +1958,26 @@ function cod_session_views_default_views() {
       'reduce_duplicates' => 0,
     ),
   ));
-  $handler->override_option('title', 'Proposed Sessions');
-  $handler->override_option('path', 'program/sessions/proposed');
-  $handler->override_option('menu', array(
-    'type' => 'tab',
-    'title' => 'Proposed sessions',
-    'description' => '',
-    'weight' => '10',
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
+  $handler->override_option('pane_title', 'Sessions proposals (Proposed)');
+  $handler->override_option('pane_description', '');
+  $handler->override_option('pane_category', array(
+    'name' => 'View panes',
     'weight' => 0,
-    'name' => 'navigation',
   ));
+  $handler->override_option('allow', array(
+    'use_pager' => FALSE,
+    'items_per_page' => FALSE,
+    'offset' => FALSE,
+    'link_to_view' => FALSE,
+    'more_link' => FALSE,
+    'path_override' => FALSE,
+    'title_override' => FALSE,
+    'exposed_form' => FALSE,
+    'fields_override' => FALSE,
+  ));
+  $handler->override_option('argument_input', array());
+  $handler->override_option('link_to_view', 0);
+  $handler->override_option('inherit_panels_path', 0);
 
   $views[$view->name] = $view;
 
