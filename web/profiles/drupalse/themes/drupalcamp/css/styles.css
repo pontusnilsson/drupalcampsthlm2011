@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background: #e9eae3 url(../images/bg-header.jpg) top center repeat-x;
-  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
   line-height:1.2em;
 }
 

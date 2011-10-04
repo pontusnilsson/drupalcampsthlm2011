@@ -759,7 +759,9 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->subtype = 'sessions-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'path' => 'sessions',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
