@@ -8,7 +8,7 @@
  */
 ?>
 <div class="drupalcamp-page-1 page-outer-wrapper ">
- <div class="page grid-12 push-1 clear-block">
+ <div class="page grid-12 push-1 clear-block alpha">
 
 <?php if (!empty($css_id)): ?>
   <div id="<?php print $css_id; ?>" class="clear-block">
