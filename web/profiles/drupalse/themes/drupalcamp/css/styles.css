@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   background: #e9eae3 url(../images/bg-header.jpg) top center repeat-x;
@@ -82,11 +81,12 @@ body {
 }
 
 .page-sidebar-left h2 {
-    font-size: 1.2em;
-    line-height: 1.3em;
-margin: 8px 0;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin: 8px 0;
 }
 
+.drupalcamp-user-page .pane-content,
 .drupalcamp-page-1 .page-navigation .panel-pane,
 .drupalcamp-page-1 .page-sidebar-left .panel-pane,
 .drupalcamp-page-1 .page-content .panel-pane,
@@ -104,16 +104,14 @@ margin: 8px 0;
 }
 
 .pane-pane-messages .tabs ul {
-    border: 0 none;
-    margin-bottom: 10px;
-    padding: 0;
+  border: 0 none;
+  margin-bottom: 10px;
+  padding: 0;
 }
-
 
 /**
  * Messages
  */
-
 div.messages {
   border: 7px solid;
   margin: 10px 0;
@@ -142,7 +140,6 @@ div.messages.error {
   background: #FCC;
   border-color: #D77;
 }
-
 
 ul.tabs.primary {
     margin:5px 5px 5px 0;

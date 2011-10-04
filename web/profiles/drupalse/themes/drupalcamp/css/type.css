@@ -1,5 +1,6 @@
 #front-sponsors .sponsor {
-  float:left; 
+  float:left;
+  margin-right: 7px;
 }
 
 #front-sponsors {
