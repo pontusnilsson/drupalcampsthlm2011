@@ -130,9 +130,39 @@ function cod_sponsors_views_default_views() {
   ));
   $handler->override_option('empty_format', '1');
   $handler->override_option('items_per_page', 0);
-  $handler->override_option('style_plugin', 'list');
+  $handler->override_option('style_plugin', 'semanticviews_default');
   $handler->override_option('style_options', array(
-    'type' => 'ul',
+    'grouping' => '',
+    'group' => array(
+      'element_type' => 'h3',
+      'class' => 'title',
+    ),
+    'list' => array(
+      'element_type' => '',
+      'class' => '',
+    ),
+    'row' => array(
+      'element_type' => 'div',
+      'class' => 'sponsor',
+      'last_every_nth' => '0',
+      'first_class' => 'first',
+      'last_class' => 'last',
+      'striping_classes' => 'odd even',
+    ),
+  ));
+  $handler->override_option('row_plugin', 'semanticviews_fields');
+  $handler->override_option('row_options', array(
+    'semantic_html' => array(
+      'field_logo_fid' => array(
+        'element_type' => 'div',
+        'class' => 'logo',
+      ),
+      'title' => array(
+        'element_type' => 'div',
+        'class' => 'title',
+      ),
+    ),
+    'skip_blank' => 0,
   ));
   $handler = $view->new_display('block', 'Gold Sponsor Block', 'block_1');
   $handler->override_option('fields', array(
