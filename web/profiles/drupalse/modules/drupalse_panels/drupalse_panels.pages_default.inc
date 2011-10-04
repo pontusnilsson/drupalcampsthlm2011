@@ -180,7 +180,7 @@ function drupalse_panels_default_page_manager_handlers() {
   $handler->task = 'site_template';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -30;
+  $handler->weight = -29;
   $handler->conf = array(
     'title' => 'DrupalCamp',
     'no_blocks' => 0,
@@ -287,7 +287,7 @@ function drupalse_panels_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-12 push-1',
+      'css_class' => 'grid-12 push-1 alpha',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -878,7 +878,7 @@ function drupalse_panels_default_page_manager_pages() {
       'link_to_view' => 0,
       'args' => '',
       'url' => '',
-      'display' => 'block_1',
+      'display' => 'block_8',
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -910,7 +910,7 @@ function drupalse_panels_default_page_manager_pages() {
       'link_to_view' => 0,
       'args' => '',
       'url' => '',
-      'display' => 'block_2',
+      'display' => 'block_1',
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -925,6 +925,38 @@ function drupalse_panels_default_page_manager_pages() {
     $display->panels['content'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
+    $pane->panel = 'content';
+    $pane->type = 'views';
+    $pane->subtype = 'Sponsors';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '0',
+      'pager_id' => '',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block_2',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['content'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_sponsor';
@@ -941,10 +973,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['drupalse_sponsors'] = $page;
