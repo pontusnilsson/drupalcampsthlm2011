@@ -142,3 +142,8 @@ div.messages.error {
   background: #FCC;
   border-color: #D77;
 }
+
+
+ul.tabs.primary {
+    margin:5px 5px 5px 0;
+}
