@@ -20,6 +20,31 @@ function drupalse_imagestyles_imagecache_default_presets() {
         ),
       ),
     ),
+    'drupalse_logosmall' => array(
+      'presetname' => 'drupalse_logosmall',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '100',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '',
+            'height' => '50',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
     'drupalse_organizing' => array(
       'presetname' => 'drupalse_organizing',
       'actions' => array(
