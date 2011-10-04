@@ -1,5 +1,9 @@
-.sponsor {
-  
+#front-sponsors .sponsor {
+  float:left; 
+}
+
+#front-sponsors {
+  overflow:hidden;
 }
 
 .sponsor .logo {

@@ -536,12 +536,19 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->subtype = 'Sponsors-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'items_per_page' => '0',
+      'override_title' => 1,
+      'override_title_text' => 'Thanks to our sponsor',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'front-sponsors',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-2'] = $pane;
