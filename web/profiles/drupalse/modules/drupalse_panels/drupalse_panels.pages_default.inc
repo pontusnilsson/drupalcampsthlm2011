@@ -876,17 +876,13 @@ function drupalse_panels_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-4';
     $pane->panel = 'sidebar_left';
-    $pane->type = 'drupalse_twitter_content_type';
-    $pane->subtype = 'drupalse_twitter_content_type';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_ticket';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'item1' => '',
-      'item2' => NULL,
-      'override_title' => 1,
-      'override_title_text' => 'DrupalCamp Tweets',
-      'tag' => '#drupalsthlm',
-      'items' => '10',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -917,6 +913,30 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->position = 2;
     $display->content['new-5'] = $pane;
     $display->panels['sidebar_left'][2] = 'new-5';
+    $pane = new stdClass;
+    $pane->pid = 'new-6';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'drupalse_twitter_content_type';
+    $pane->subtype = 'drupalse_twitter_content_type';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'item1' => '',
+      'item2' => NULL,
+      'override_title' => 1,
+      'override_title_text' => 'DrupalCamp Tweets',
+      'tag' => '#drupalsthlm',
+      'items' => '10',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
