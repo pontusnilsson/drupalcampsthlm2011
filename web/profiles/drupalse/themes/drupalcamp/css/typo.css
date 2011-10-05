@@ -7,6 +7,9 @@ body {
   line-height:1.2em;
 }
 
+/**
+ * Headlines
+ */
 h1 {
   font-size: 28px bold;
   color:#323232;
@@ -22,3 +25,11 @@ h2 {
 h3 {
   color:#323232;
 }
+
+/**
+ * Links
+ */
+ a {
+   color:#55A69E;
+ }
+ 

@@ -1,12 +1,17 @@
+/**
+ * Style for DrupalCamp Fall 2011
+ */
+
+ /**
+ * Site layout style and graphics for wrappers, header etc
+ */
 body {
   margin: 0;
   background: #e9eae3 url(../images/bg-header.jpg) top center repeat-x;
-  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
-  line-height:1.2em;
 }
 
-.pane-title {
-  color:#323232;
+#front-sponsors {
+  overflow:hidden;
 }
 
 #page {
@@ -25,6 +30,32 @@ body {
   margin: 50px 0;
 }
 
+#mission {
+  background: url(../images/bg-mission.png) top left no-repeat;
+  padding: 100px 120px 0 30px;
+  width: 422px; /* 572 - 120 - 30 */
+  height: 50px; /* 150 - 100 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Padding and background for individual panes */ 
+.drupalcamp-user-page .pane-content,
+.drupalcamp-page-1 .page-navigation .panel-pane,
+.drupalcamp-page-1 .page-sidebar-left .panel-pane,
+.drupalcamp-page-1 .page-content .panel-pane,
+.drupalcamp-page-1 .page-highlighted .panel-pane {
+  background:#fff;
+  padding: 20px;
+}
+
+/**
+ * Navigation
+ */
 #navigation li.first {
   padding-left: 0;
 }
@@ -60,39 +91,17 @@ body {
   background-position: 0 -40px;
 }
 
-
 #navigation ul {
   padding: 35px 0 25px 0;
   margin: 0;
   list-style-type: none;
 }
 
-#mission {
-  background: url(../images/bg-mission.png) top left no-repeat;
-  padding: 100px 120px 0 30px;
-  width: 422px; /* 572 - 120 - 30 */
-  height: 50px; /* 150 - 100 */
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #FFF;
-  font-size: 14px;
-  font-style: italic;
-}
-
-.page-sidebar-left h2 {
-  font-size: 1.2em;
-  line-height: 1.3em;
-  margin: 8px 0;
-}
-
-.drupalcamp-user-page .pane-content,
-.drupalcamp-page-1 .page-navigation .panel-pane,
-.drupalcamp-page-1 .page-sidebar-left .panel-pane,
-.drupalcamp-page-1 .page-content .panel-pane,
-.drupalcamp-page-1 .page-highlighted .panel-pane {
-  background:#fff;
-  padding: 20px;
+/**
+ * Tabs
+ */
+ul.tabs.primary {
+    margin:5px 5px 5px 0;
 }
 
 .pane-pane-messages .tabs ul.primary a {
@@ -110,7 +119,7 @@ body {
 }
 
 /**
- * Messages
+ * Messages styling
  */
 div.messages {
   border: 7px solid;
@@ -141,6 +150,10 @@ div.messages.error {
   border-color: #D77;
 }
 
-ul.tabs.primary {
-    margin:5px 5px 5px 0;
+/**
+ * Front page specific
+ */
+#front-sponsors .sponsor {
+  float:left;
+  margin-right: 7px;
 }

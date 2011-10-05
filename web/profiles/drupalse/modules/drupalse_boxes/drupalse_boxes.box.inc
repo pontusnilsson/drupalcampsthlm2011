@@ -53,7 +53,15 @@ function drupalse_boxes_default_box() {
   $box->title = 'Complete your registration';
   $box->description = 'DrupalCamp Ticket';
   $box->options = array(
-    'body' => 'To complete your registration you need to go to http://www.tickets.com',
+    'body' => 'Thanks for your registration. You are almost done.
+
+To complete your registration you need to go to <a href="http://www.biljett.com/drupalcampstockholm2011">www.biljett.com</a> Use the same first name and last name when you register on tickets.se as you use on your user here.
+
+When we have confirmed your payment this page will not be available for you anymore.
+
+Now that you are logged in you may <a href"#">create session proposals</a> or check out the already <a href="/sessions">proposed sessions</a>. 
+
+See you at DrupalCamp 12 november.',
     'format' => '1',
   );
   $export['drupalse_ticket'] = $box;
