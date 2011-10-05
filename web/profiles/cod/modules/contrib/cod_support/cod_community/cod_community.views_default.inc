@@ -86,17 +86,20 @@ function cod_community_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_user' => 1,
-      'exclude' => 0,
+      'link_to_user' => 0,
+      'exclude' => 1,
       'id' => 'value_4',
       'table' => 'profile_values_profile_first',
       'field' => 'value',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
     'value_5' => array(
       'label' => 'Name',
       'alter' => array(
-        'alter_text' => 0,
+        'alter_text' => 1,
         'text' => '[value_4] [value_5]',
         'make_link' => 0,
         'path' => 'users/[name]',
@@ -122,6 +125,9 @@ function cod_community_views_default_views() {
       'table' => 'profile_values_profile_last',
       'field' => 'value',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
     'picture' => array(
       'label' => '',
@@ -146,6 +152,7 @@ function cod_community_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
+      'imagecache_preset' => 'drupalse_profile',
       'exclude' => 0,
       'id' => 'picture',
       'table' => 'users',

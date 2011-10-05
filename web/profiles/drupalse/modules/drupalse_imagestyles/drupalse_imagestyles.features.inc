@@ -75,6 +75,26 @@ function drupalse_imagestyles_imagecache_default_presets() {
         ),
       ),
     ),
+    'drupalse_profile' => array(
+      'presetname' => 'drupalse_profile',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_desaturate',
+          'data' => array(),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '65',
+            'height' => '65',
+          ),
+        ),
+      ),
+    ),
     'drupalse_silver' => array(
       'presetname' => 'drupalse_silver',
       'actions' => array(
