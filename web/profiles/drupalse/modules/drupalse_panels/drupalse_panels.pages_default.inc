@@ -346,7 +346,8 @@ function drupalse_panels_default_page_manager_handlers() {
             'visibility_setting' => '1',
             'paths' => 'user*
 admin*
-/node/*/edit',
+node/*/edit
+node/add/*',
           ),
           'context' => 'argument_string_1',
           'not' => FALSE,
