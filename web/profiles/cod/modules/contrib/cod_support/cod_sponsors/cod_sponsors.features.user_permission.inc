@@ -11,7 +11,8 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'create sponsor content',
     'roles' => array(
       '0' => 'authenticated user',
-      '1' => 'sponsor organizer',
+      '1' => 'site administrator',
+      '2' => 'sponsor organizer',
     ),
   );
 
@@ -27,7 +28,8 @@ function cod_sponsors_user_default_permissions() {
   $permissions['edit any sponsor content'] = array(
     'name' => 'edit any sponsor content',
     'roles' => array(
-      '0' => 'sponsor organizer',
+      '0' => 'site administrator',
+      '1' => 'sponsor organizer',
     ),
   );
 
@@ -36,7 +38,8 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'edit field_logo',
     'roles' => array(
       '0' => 'authenticated user',
-      '1' => 'sponsor organizer',
+      '1' => 'site administrator',
+      '2' => 'sponsor organizer',
     ),
   );
 
@@ -45,7 +48,8 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'edit field_related_attendees',
     'roles' => array(
       '0' => 'authenticated user',
-      '1' => 'sponsor organizer',
+      '1' => 'site administrator',
+      '2' => 'sponsor organizer',
     ),
   );
 
@@ -54,7 +58,8 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'edit field_url',
     'roles' => array(
       '0' => 'authenticated user',
-      '1' => 'sponsor organizer',
+      '1' => 'site administrator',
+      '2' => 'sponsor organizer',
     ),
   );
 
@@ -64,6 +69,7 @@ function cod_sponsors_user_default_permissions() {
     'roles' => array(
       '0' => 'anonymous user',
       '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -73,6 +79,7 @@ function cod_sponsors_user_default_permissions() {
     'roles' => array(
       '0' => 'anonymous user',
       '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -82,6 +89,7 @@ function cod_sponsors_user_default_permissions() {
     'roles' => array(
       '0' => 'anonymous user',
       '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -91,6 +99,7 @@ function cod_sponsors_user_default_permissions() {
     'roles' => array(
       '0' => 'anonymous user',
       '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 

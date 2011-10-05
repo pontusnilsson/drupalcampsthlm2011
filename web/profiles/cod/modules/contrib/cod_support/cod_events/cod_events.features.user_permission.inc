@@ -19,6 +19,7 @@ function cod_events_user_default_permissions() {
     'name' => 'administer all signups',
     'roles' => array(
       '0' => 'attendee manager',
+      '1' => 'site administrator',
     ),
   );
 
@@ -28,6 +29,7 @@ function cod_events_user_default_permissions() {
     'roles' => array(
       '0' => 'attendee manager',
       '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -37,6 +39,7 @@ function cod_events_user_default_permissions() {
     'roles' => array(
       '0' => 'attendee manager',
       '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -45,6 +48,7 @@ function cod_events_user_default_permissions() {
     'name' => 'cancel signups',
     'roles' => array(
       '0' => 'attendee manager',
+      '1' => 'site administrator',
     ),
   );
 
@@ -53,6 +57,7 @@ function cod_events_user_default_permissions() {
     'name' => 'edit own signups',
     'roles' => array(
       '0' => 'attendee manager',
+      '1' => 'site administrator',
     ),
   );
 
@@ -61,6 +66,7 @@ function cod_events_user_default_permissions() {
     'name' => 'email all signed up users',
     'roles' => array(
       '0' => 'attendee manager',
+      '1' => 'site administrator',
     ),
   );
 
@@ -69,6 +75,7 @@ function cod_events_user_default_permissions() {
     'name' => 'email users signed up for own content',
     'roles' => array(
       '0' => 'attendee manager',
+      '1' => 'site administrator',
     ),
   );
 
@@ -87,6 +94,7 @@ function cod_events_user_default_permissions() {
     'roles' => array(
       '0' => 'attendee manager',
       '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -95,6 +103,7 @@ function cod_events_user_default_permissions() {
     'name' => 'view all signups',
     'roles' => array(
       '0' => 'attendee manager',
+      '1' => 'site administrator',
     ),
   );
 

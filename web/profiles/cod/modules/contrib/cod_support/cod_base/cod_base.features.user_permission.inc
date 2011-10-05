@@ -17,7 +17,9 @@ function cod_base_user_default_permissions() {
   // Exported permission: access site reports
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'site administrator',
+    ),
   );
 
   // Exported permission: access user profiles
@@ -26,6 +28,7 @@ function cod_base_user_default_permissions() {
     'roles' => array(
       '0' => 'anonymous user',
       '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -76,6 +79,7 @@ function cod_base_user_default_permissions() {
     'name' => 'view own orders',
     'roles' => array(
       '0' => 'authenticated user',
+      '1' => 'site administrator',
     ),
   );
 
