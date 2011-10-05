@@ -9,6 +9,19 @@ function drupalse_boxes_default_box() {
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'drupalse_awards';
+  $box->plugin_key = 'simple';
+  $box->title = 'Swedish Drupal Awards';
+  $box->description = 'DrupalCamp Awards';
+  $box->options = array(
+    'body' => 'Swedish Drupal awards description, rules etc goes here.',
+    'format' => '1',
+  );
+  $export['drupalse_awards'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'drupalse_registerpromo';
   $box->plugin_key = 'simple';
   $box->title = 'Sign up';
