@@ -877,7 +877,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'boxes-drupalse_ticket';
+    $pane->subtype = 'boxes-drupalse_buyticket';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

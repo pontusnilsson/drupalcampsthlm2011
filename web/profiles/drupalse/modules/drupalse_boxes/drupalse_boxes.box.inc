@@ -22,6 +22,19 @@ function drupalse_boxes_default_box() {
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'drupalse_buyticket';
+  $box->plugin_key = 'simple';
+  $box->title = 'Bought ticket?';
+  $box->description = 'Buy ticket promo';
+  $box->options = array(
+    'body' => 'Have you purchased your ticket at biljett.com? Please go to <a href="/ticket">ticket</a> for more information. It could also be that we not yet have confirmed your purchase. If this block doesn\'t dissapear in 3 days, contact us at CONTACT.',
+    'format' => '1',
+  );
+  $export['drupalse_buyticket'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'drupalse_registerpromo';
   $box->plugin_key = 'simple';
   $box->title = 'Sign up';
