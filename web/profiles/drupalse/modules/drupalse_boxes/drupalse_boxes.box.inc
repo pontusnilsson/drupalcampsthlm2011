@@ -11,11 +11,38 @@ function drupalse_boxes_default_box() {
   $box->api_version = 1;
   $box->delta = 'drupalse_awards';
   $box->plugin_key = 'simple';
-  $box->title = 'Swedish Drupal Awards';
+  $box->title = 'Swedish Drupal Awards 2011';
   $box->description = 'DrupalCamp Awards';
   $box->options = array(
-    'body' => 'Swedish Drupal awards description, rules etc goes here.',
-    'format' => '1',
+    'body' => 'Äntligen! Nu är det dax att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:
+
+ * Årets svenska webbplats
+ * Årets svenska drupalist
+ * Årets svenska design
+ * Årets svenska teknik
+
+Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats? 
+Grundförutsättningar för att kunna nomineras är:
+ * Det ska ha med Drupal att göra
+ * Det ska vara svenskt
+ * Det ska varit aktuellt under året
+ * Det ska inte ha vunnit tidigare
+
+Nomeneringsprocessen är öppen och sker här på DrupalCamps webb.  Välkommen att nominera!
+
+<strong>Vad händer sedan?</strong>
+
+En kommitté bestående av styrgruppen för DrupalCamp Stockholm 2011 utser sedan tävlingsbidrag inom varje kategori. Anledningen till att det är en modererad urvalsprocess är för att få en variation och bredd bland tävlingsbidragen samt att det kan bli för mycket att gå igenom för en besökare. Besökarnas röst är viktigare för att utse vinnarna. 
+
+Tävlingsbidragen kommer att presenteras på DrupalCamps webbplats innan DrupalCamp går av stapeln så besökarna får tid att titta igenom och fundera.
+
+Tävlingen avgörs sedan genom röstning bland besökarna på DrupalCamp, så se till att komma dit och göra din röst hörd!
+
+Läs mer om bakgrund och diskution om Swedish Drupal Awards 2001 på g.d.o.:
+
+http://groups.drupal.org/node/178154
+',
+    'format' => '2',
   );
   $export['drupalse_awards'] = $box;
 
