@@ -345,7 +345,8 @@ function drupalse_panels_default_page_manager_handlers() {
           'settings' => array(
             'visibility_setting' => '1',
             'paths' => 'user*
-admin*',
+admin*
+/node/*/edit',
           ),
           'context' => 'argument_string_1',
           'not' => FALSE,
@@ -504,7 +505,7 @@ function drupalse_panels_default_page_manager_pages() {
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'Swedish Drupal Awards',
+    'title' => 'Awards',
     'name' => 'primary-links',
     'weight' => '0',
     'parent' => array(
