@@ -5,17 +5,18 @@ engine = phptemplate
 
 base = precision
 
-;Panel layouts
+; Panel layouts
 plugins[panels][layouts] = plugins/layouts
 plugins[panels][styles] = plugins/styles
 api[panels][styles][version] = 2
 
-;Stylesheets
+; Stylesheets
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/grid.css
-stylesheets[all][] = css/type.css
+stylesheets[all][] = css/typo.css
 stylesheets[all][] = css/styles.css
-; use this to check the regions
+
+; Stylesheet to use for grid debugging
 ;stylesheets[all][] = css/regions.css
 
 
