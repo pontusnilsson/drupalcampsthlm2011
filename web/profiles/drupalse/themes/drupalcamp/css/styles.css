@@ -43,6 +43,10 @@ body {
   font-style: italic;
 }
 
+.drupalcamp-page-1 .page-highlighted .panel-pane {
+  margin-bottom: 1em;
+}
+
 /* Padding and background for individual panes */ 
 .drupalcamp-user-page .pane-content,
 .drupalcamp-page-1 .page-navigation .panel-pane,
