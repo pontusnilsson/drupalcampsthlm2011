@@ -771,60 +771,6 @@ advanced|Advanced',
     ),
   );
 
-  // Exported field: field_track
-  $fields['session-field_track'] = array(
-    'field_name' => 'field_track',
-    'type_name' => 'session',
-    'display_settings' => array(
-      'weight' => '-3',
-      'parent' => 'group_audience',
-      'label' => array(
-        'format' => 'inline',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'text',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'text',
-    'active' => '1',
-    'text_processing' => '0',
-    'max_length' => '',
-    'allowed_values' => 'Track 1
-Track 2
-Track 3',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'default_value' => array(
-        '0' => array(
-          'value' => '',
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Track',
-      'weight' => '-3',
-      'description' => '',
-      'type' => 'optionwidgets_buttons',
-      'module' => 'optionwidgets',
-    ),
-  );
-
   // Exported field: field_slot_datetime
   $fields['time_slot-field_slot_datetime'] = array(
     'field_name' => 'field_slot_datetime',
@@ -909,7 +855,6 @@ Track 3',
   t('Speaker(s)');
   t('Status');
   t('Time slot');
-  t('Track');
 
   return $fields;
 }

@@ -89,8 +89,7 @@ function cod_session_fieldgroup_default_groups() {
     ),
     'weight' => '1',
     'fields' => array(
-      '0' => 'field_track',
-      '1' => 'field_experience',
+      '0' => 'field_experience',
     ),
   );
 

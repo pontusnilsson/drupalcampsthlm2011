@@ -206,15 +206,6 @@ function cod_session_user_default_permissions() {
     ),
   );
 
-  // Exported permission: edit field_track
-  $permissions['edit field_track'] = array(
-    'name' => 'edit field_track',
-    'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
-    ),
-  );
-
   // Exported permission: edit own room content
   $permissions['edit own room content'] = array(
     'name' => 'edit own room content',
@@ -337,17 +328,6 @@ function cod_session_user_default_permissions() {
       '0' => 'anonymous user',
       '1' => 'authenticated user',
       '2' => 'site administrator',
-    ),
-  );
-
-  // Exported permission: view field_track
-  $permissions['view field_track'] = array(
-    'name' => 'view field_track',
-    'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-      '2' => 'session organizer',
-      '3' => 'site administrator',
     ),
   );
 
