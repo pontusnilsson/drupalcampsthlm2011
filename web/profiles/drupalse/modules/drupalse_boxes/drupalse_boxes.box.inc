@@ -45,5 +45,18 @@ function drupalse_boxes_default_box() {
   );
   $export['drupalse_sponsor'] = $box;
 
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'drupalse_ticket';
+  $box->plugin_key = 'simple';
+  $box->title = 'Complete your registration';
+  $box->description = 'DrupalCamp Ticket';
+  $box->options = array(
+    'body' => 'To complete your registration you need to go to http://www.tickets.com',
+    'format' => '1',
+  );
+  $export['drupalse_ticket'] = $box;
+
   return $export;
 }
