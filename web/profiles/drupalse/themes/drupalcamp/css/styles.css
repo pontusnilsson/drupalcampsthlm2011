@@ -205,7 +205,18 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   position:relative;
 }
 
-.view-Sponsors td.col-1,
+.view-Sponsors td.col-1 {
+  padding-right:40px;
+}
+
 .view-Sponsors td.col-2 {
-  padding-right:10px;
+  
+}
+
+.view-Sponsors.view-display-id-block_2 .view-Sponsors td.col-1 {
+
+}
+
+.view-Sponsors.view-display-id-block_2 td.col-2 {
+  
 }
