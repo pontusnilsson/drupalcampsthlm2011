@@ -844,7 +844,7 @@ function cod_sponsors_views_default_views() {
       'empty_zero' => 0,
       'link_to_node' => 1,
       'label_type' => 'none',
-      'format' => 'drupalse_organizing_linked',
+      'format' => 'drupalse_gold_linked',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
