@@ -161,3 +161,46 @@ div.messages.error {
   float:left;
   margin-right: 7px;
 }
+
+#front-sponsors h2.pane-title {
+  font-style:italic;
+  font-weight:normal;
+  margin-top: -10px;
+}
+/**
+ * Twitter
+ */
+ div.tweets-pulled-listing a {
+   color: #55A69E;
+}
+
+.twitter-pane h2.pane-title {
+  text-indent: -9999px;
+  background-image: url('../images/twitter-headline.png');
+  height:59px;
+}
+
+div.tweets-pulled-listing div.tweet-divider {
+  border:0;
+  margin-bottom: 15px;
+}
+
+div.tweets-pulled-listing .tweet-time a {
+  color:#71716f;
+  font-size:10px;
+}
+
+div.tweets-pulled-listing .tweet-text {
+  
+}
+
+div.tweets-pulled-listing .tweet-author {
+  position:absolute;
+  bottom: 4px;
+  left:47px;
+}
+
+div.tweets-pulled-listing  .tweet-photo-wrapper {
+  overflow: hidden;
+  position:relative;
+}

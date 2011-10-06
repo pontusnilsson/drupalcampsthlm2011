@@ -237,7 +237,7 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'DrupalCamp mission',
       'title' => '',
-      'body' => 'Welcome to DrupalCamp - a conference about the Drupal open source CMS, focusing on media, business and technology, in Stockholm 6-7 of May',
+      'body' => 'A one-day conference about the highly popular Drupal CMS. Join us and learn more about Drupal and the web as a whole from our awesome speakers and share ideas with others.',
       'format' => '1',
       'substitute' => 0,
     );
@@ -503,7 +503,10 @@ function drupalse_panels_default_page_manager_pages() {
   $page->admin_title = 'Drupal awards';
   $page->admin_description = '';
   $page->path = 'drupal-awards';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Awards',
@@ -638,7 +641,10 @@ function drupalse_panels_default_page_manager_pages() {
   $page->admin_title = 'Community';
   $page->admin_description = '';
   $page->path = 'community';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Community',
@@ -833,6 +839,26 @@ function drupalse_panels_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'highlighted';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-front_conference_info';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-2'] = $pane;
+    $display->panels['highlighted'][0] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'highlighted';
     $pane->type = 'views_panes';
     $pane->subtype = 'Sponsors-panel_pane_1';
     $pane->shown = TRUE;
@@ -851,11 +877,11 @@ function drupalse_panels_default_page_manager_pages() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-2'] = $pane;
-    $display->panels['highlighted'][0] = 'new-2';
+    $pane->position = 1;
+    $display->content['new-3'] = $pane;
+    $display->panels['highlighted'][1] = 'new-3';
     $pane = new stdClass;
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_registerpromo';
@@ -872,10 +898,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-4';
     $pane = new stdClass;
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_buyticket';
@@ -892,10 +918,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-5';
     $pane = new stdClass;
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'user-0';
@@ -912,10 +938,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar_left'][2] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-6';
     $pane = new stdClass;
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'sidebar_left';
     $pane->type = 'drupalse_twitter_content_type';
     $pane->subtype = 'drupalse_twitter_content_type';
@@ -933,11 +959,14 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'twitter-pane',
+    );
     $pane->extras = array();
     $pane->position = 3;
-    $display->content['new-6'] = $pane;
-    $display->panels['sidebar_left'][3] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
@@ -966,6 +995,8 @@ function drupalse_panels_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'normal',
@@ -1051,7 +1082,10 @@ function drupalse_panels_default_page_manager_pages() {
   $page->admin_title = 'Sessions';
   $page->admin_description = '';
   $page->path = 'sessions';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Sessions',
@@ -1153,7 +1187,10 @@ function drupalse_panels_default_page_manager_pages() {
   $page->admin_title = 'Sponsors';
   $page->admin_description = '';
   $page->path = 'sponsors';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Sponsors',
@@ -1361,6 +1398,8 @@ function drupalse_panels_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'normal',
