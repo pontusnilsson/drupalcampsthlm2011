@@ -916,12 +916,6 @@ function cod_sponsors_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'columns' => '1',
-    'alignment' => 'horizontal',
-    'fill_single_line' => 1,
-  ));
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');

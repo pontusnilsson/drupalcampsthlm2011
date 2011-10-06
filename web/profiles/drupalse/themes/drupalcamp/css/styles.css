@@ -204,3 +204,8 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   overflow: hidden;
   position:relative;
 }
+
+.view-Sponsors td.col-1,
+.view-Sponsors td.col-2 {
+  padding-right:10px;
+}
