@@ -609,7 +609,7 @@ function drupalse_panels_default_page_manager_pages() {
     $display->panels['content'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'highlighted';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_awards';
     $pane->shown = TRUE;
@@ -626,7 +626,27 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-3'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-3';
+    $display->panels['highlighted'][0] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_awards2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

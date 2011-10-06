@@ -28,11 +28,20 @@ Grundförutsättningar för att kunna nomineras är:
  * Det ska varit aktuellt under året
  * Det ska inte ha vunnit tidigare
 
-Nomeneringsprocessen är öppen och sker här på DrupalCamps webb.  Välkommen att nominera!
+Nomeneringsprocessen är öppen och sker här på DrupalCamps webb.  Välkommen att nominera!',
+    'format' => '2',
+  );
+  $export['drupalse_awards'] = $box;
 
-<strong>Vad händer sedan?</strong>
-
-En kommitté bestående av styrgruppen för DrupalCamp Stockholm 2011 utser sedan tävlingsbidrag inom varje kategori. Anledningen till att det är en modererad urvalsprocess är för att få en variation och bredd bland tävlingsbidragen samt att det kan bli för mycket att gå igenom för en besökare. Besökarnas röst är viktigare för att utse vinnarna. 
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'drupalse_awards2';
+  $box->plugin_key = 'simple';
+  $box->title = 'Vad händer sen?';
+  $box->description = 'DrupalCamp Awards 2';
+  $box->options = array(
+    'body' => 'En kommitté bestående av styrgruppen för DrupalCamp Stockholm 2011 utser sedan tävlingsbidrag inom varje kategori. Anledningen till att det är en modererad urvalsprocess är för att få en variation och bredd bland tävlingsbidragen samt att det kan bli för mycket att gå igenom för en besökare. Besökarnas röst är viktigare för att utse vinnarna. 
 
 Tävlingsbidragen kommer att presenteras på DrupalCamps webbplats innan DrupalCamp går av stapeln så besökarna får tid att titta igenom och fundera.
 
@@ -40,11 +49,10 @@ Tävlingen avgörs sedan genom röstning bland besökarna på DrupalCamp, så se
 
 Läs mer om bakgrund och diskution om Swedish Drupal Awards 2001 på g.d.o.:
 
-http://groups.drupal.org/node/178154
-',
-    'format' => '2',
+http://groups.drupal.org/node/178154',
+    'format' => '1',
   );
-  $export['drupalse_awards'] = $box;
+  $export['drupalse_awards2'] = $box;
 
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
@@ -118,6 +126,19 @@ See you at DrupalCamp 12 november.',
     'format' => '1',
   );
   $export['drupalse_ticket'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'front_conference_info';
+  $box->plugin_key = 'simple';
+  $box->title = 'Welcome to DrupalCamp Stockholm';
+  $box->description = 'Conference information';
+  $box->options = array(
+    'body' => 'A one-day conference about the highly popular Drupal CMS. Join us and learn more about Drupal and the web as a whole from our awesome speakers and share ideas with others. Our sessions will be in Swedish and English so something for everyone, Swedish or not. To get started, register an account here and buy your ticket at a mere 99 SEK (about €10).',
+    'format' => '1',
+  );
+  $export['front_conference_info'] = $box;
 
   return $export;
 }

@@ -1,5 +1,4 @@
 <?php
-// $Id: twitter_pull.module,v 1.1.2.7 2011/01/11 04:08:04 inadarei Exp $
 
 /**
  * @file
@@ -97,7 +96,7 @@ function twitter_pull_retrieve($twitkey, $num_items = NULL) {
 
   $tweets = array();
 
-  if (!empty($cache) && !empty($cache->data)) {
+  if (!empty($cache) && !empty($cache->data) && (time() < $cache->expire)) {
     $tweets =  $cache->data;
   }
   else {
