@@ -9,6 +9,12 @@ function drupalse_custom_form_alter(&$form, &$form_state, $form_id) {
     $form["Personal information"]["#weight"] = 0;
     $form["Personal information"]['profile_interests']['#resizable'] = false;
   }
+
+  if($form['#id'] == 'node-form') {
+    if (isset($form['buttons']['preview'])) {
+      unset($form['buttons']['preview']);
+    }
+  }
 }
 
 /**
