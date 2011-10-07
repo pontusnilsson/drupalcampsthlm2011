@@ -6,5 +6,7 @@ function drupalse_custom_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_register') {
     $form['signup']['3']['#default_value'] = 1;
     $form['signup']['#access'] = FALSE;
+    $form["Personal information"]["#weight"] = 0;
+    $form["account"]['#weight'] = 1;
   }
 }
