@@ -15,7 +15,7 @@ body {
 }
 
 #page {
-  background: url("../images/bg-triangles.png") no-repeat scroll 0 478px transparent;
+  background: url("../images/bg-triangles.png") no-repeat scroll 0 515px transparent;
   padding:0px 10px 10px 10px;
   min-height: 820px;
 }
@@ -107,8 +107,8 @@ body {
 
 .menu-name-secondary-links {
   float:right;
-  background: url(../images/bg-white.png) 0px -10px;
-  padding:5px;
+  background-color:#5e8371;
+  padding:4px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
   -moz-border-radius-bottomright: 5px;
@@ -117,36 +117,23 @@ body {
   border-bottom-left-radius: 5px;
 }
 
-.menu-name-secondary-links ul {
-  float:left;
-  background-color:#FFFFFF;
-  padding:3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-
 .menu-name-secondary-links ul li {
   list-style-type:none;
   list-style-image:none; 
   float:left;
-  padding:0 16px;
+  padding:0 10px;
 }
 
 .menu-name-secondary-links ul li a,
 .menu-name-secondary-links ul li a:link,
 .menu-name-secondary-links ul li a:visited{
-  font-size:16px;
+  font-size:14px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#666;
-  text-transform:uppercase;
+  color:#fff;  
 }
 .menu-name-secondary-links ul li a:hover,
 .menu-name-secondary-links ul li a.active {
-  color:#56A79E;
+  color:#fff;  
 }
 
 /**
