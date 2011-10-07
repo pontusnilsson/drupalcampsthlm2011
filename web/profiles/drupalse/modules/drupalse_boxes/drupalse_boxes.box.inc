@@ -75,7 +75,7 @@ http://groups.drupal.org/node/178154',
   $box->title = '';
   $box->description = 'Footer';
   $box->options = array(
-    'body' => 'Drupal is a <a href="http://drupal.com/trademark" target="_blank">registered trademark</a>of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a> | Visit the Swedish Drupal community at <a target="_blank" href="http://groups.drupal.org/sweden">groups.drupal.org/sweden</a> | <a href="/about-this-site">About this site</a>',
+    'body' => 'Drupal is a <a href="http://drupal.com/trademark" target="_blank">registered trademark</a> of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a> | Visit the Swedish Drupal community at <a target="_blank" href="http://groups.drupal.org/sweden">groups.drupal.org/sweden</a> | <a href="/about-this-site">About this site</a>',
     'format' => '1',
   );
   $export['drupalse_footer'] = $box;
@@ -88,8 +88,10 @@ http://groups.drupal.org/node/178154',
   $box->title = 'Sign up';
   $box->description = 'Sign up promo';
   $box->options = array(
-    'body' => 'Come to DrupalCamp. Register here.',
-    'format' => '1',
+    'body' => 'To get started, register an account here and buy your ticket at a mere 99 SEK (about €10).
+
+<a href="/user/register" class="register">Sign me up for DrupalCamp</a>',
+    'format' => '2',
   );
   $export['drupalse_registerpromo'] = $box;
 
@@ -101,8 +103,8 @@ http://groups.drupal.org/node/178154',
   $box->title = 'Want to talk at DrupalCamp Stockholm?';
   $box->description = 'Session proposal promo';
   $box->options = array(
-    'body' => 'Leave your submission here',
-    'format' => '1',
+    'body' => 'You can leave a session proposal <a href="/node/add/session">here</a>.',
+    'format' => '2',
   );
   $export['drupalse_sessionpromo'] = $box;
 

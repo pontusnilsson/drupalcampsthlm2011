@@ -150,6 +150,53 @@ function drupalse_panels_default_page_manager_handlers() {
     $display->panels['content'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
+    $pane->panel = 'content';
+    $pane->type = 'node_comment_form';
+    $pane->subtype = 'node_comment_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'anon_links' => 0,
+      'context' => 'argument_nid_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['content'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
+    $pane->panel = 'content';
+    $pane->type = 'node_comments';
+    $pane->subtype = 'node_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'mode' => '4',
+      'order' => '1',
+      'comments_per_page' => '50',
+      'anchor' => 1,
+      'context' => 'argument_nid_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $display->content['new-4'] = $pane;
+    $display->panels['content'][3] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-1';
@@ -166,10 +213,10 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-3';
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-5';
     $pane = new stdClass;
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-6';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-2';
@@ -186,10 +233,10 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-4';
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-6';
     $pane = new stdClass;
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-7';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_ticket';
@@ -229,10 +276,10 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar_left'][2] = 'new-5';
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-7';
     $pane = new stdClass;
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-8';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_registerpromo';
@@ -262,8 +309,8 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 3;
-    $display->content['new-6'] = $pane;
-    $display->panels['sidebar_left'][3] = 'new-6';
+    $display->content['new-8'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-8';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
@@ -570,7 +617,7 @@ node/add/*',
     $pane->configuration = array(
       'admin_title' => 'DrupalCamp mission',
       'title' => '',
-      'body' => 'Welcome to DrupalCamp - a conference about the Drupal open source CMS, focusing on media, business and technology, in Stockholm 6-7 of May',
+      'body' => 'A one-day conference about the highly popular Drupal CMS. Join us and learn more about Drupal and the web as a whole from our awesome speakers and share ideas with others.',
       'format' => '1',
       'substitute' => 0,
     );
@@ -1085,7 +1132,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->configuration = array(
       'items_per_page' => '0',
       'override_title' => 1,
-      'override_title_text' => 'Thanks to our sponsor',
+      'override_title_text' => 'Many thanks to our sponsors',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1721,7 +1768,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'boxes-drupalse_ticket';
+    $pane->subtype = 'boxes-drupalse_registerpromo';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1737,26 +1784,6 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->position = 0;
     $display->content['new-2'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-2';
-    $pane = new stdClass;
-    $pane->pid = 'new-3';
-    $pane->panel = 'sidebar_left';
-    $pane->type = 'block';
-    $pane->subtype = 'boxes-drupalse_registerpromo';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
