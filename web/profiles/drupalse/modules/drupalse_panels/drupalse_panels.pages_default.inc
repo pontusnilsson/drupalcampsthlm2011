@@ -130,7 +130,7 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane->configuration = array(
       'links' => 1,
       'page' => 1,
-      'no_extras' => 1,
+      'no_extras' => 0,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
@@ -540,7 +540,8 @@ function drupalse_panels_default_page_manager_handlers() {
             'paths' => 'user*
 admin*
 node/*/edit
-node/add/*',
+node/add/*
+conference-admin/*',
           ),
           'context' => 'argument_string_1',
           'not' => FALSE,
@@ -1107,7 +1108,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->panel = 'highlighted';
     $pane->type = 'block';
     $pane->subtype = 'boxes-front_conference_info';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 0,
@@ -1443,9 +1444,22 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'boxes-drupalse_sessionpromo';
+    $pane->subtype = 'boxes-drupalse_registerpromo';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 2,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 0,
       'override_title_text' => '',
@@ -1459,6 +1473,26 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->position = 0;
     $display->content['new-3'] = $pane;
     $display->panels['sidebar_left'][0] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_sessionpromo';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1551,7 +1585,7 @@ function drupalse_panels_default_page_manager_pages() {
       'url' => '',
       'display' => 'block_8',
       'override_title' => 1,
-      'override_title_text' => 'Organizing sponsor',
+      'override_title_text' => 'Organizing sponsors',
     );
     $pane->cache = array();
     $pane->style = array(
