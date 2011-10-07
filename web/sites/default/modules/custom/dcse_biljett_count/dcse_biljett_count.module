@@ -8,8 +8,8 @@ function dcse_biljett_count_block($op = 'list', $delta = 0, $edit = array()) {
     $blocks[0] = array(
       'info' => t('Biljett.com current ticket count'), 
       'weight' => 0, 
-      'status' => 1, 
-      'region' => 'left',
+      'status' => 0, 
+      'region' => '',
       'cache' => BLOCK_CACHE_GLOBAL
     );
 
@@ -34,11 +34,11 @@ function dcse_biljett_count_block($op = 'list', $delta = 0, $edit = array()) {
  * TODO: Lots of hard-coded stuff here, should be generalized
  */
 function _dcse_biljett_count_block_view() {
-  if ($count = cache_get('dcse_biljett_count:count')) {
-    return $count;
+  if ($cache = cache_get('dcse_biljett_count:count')) {
+    return $cache->data;
   }
   else {
-    $qp = qp('http://www.biljett.com/drupalcampstockholm2011');
+    $qp = htmlqp('http://www.biljett.com/drupalcampstockholm2011');
     
     // Grabs the number of tickets available
     preg_match('/\d+/i', $qp->find('label[for="quantity_164"]:eq(6)')->text(), $result);
