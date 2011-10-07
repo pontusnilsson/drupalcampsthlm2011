@@ -257,6 +257,10 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   border-right:1px solid #55A69E;
 }
 
+.drupalcamp-table td.active {
+  background:none;
+}
+
 .drupalcamp-table td.views-field-title {
   border-right:1px solid #55A69E;
 }
@@ -271,4 +275,5 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 
 .drupalcamp-table td {
   padding: 1em;
+  vertical-align: middle;
 }
