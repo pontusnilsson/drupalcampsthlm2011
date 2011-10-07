@@ -24,27 +24,8 @@ function cod_session_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '0',
   );
-  // Exported menu link: primary-links:82568654-06d2-11e0-a3ab-29212d7dea21
-  $menu_links['primary-links:82568654-06d2-11e0-a3ab-29212d7dea21'] = array(
-    'menu_name' => 'primary-links',
-    'router_path' => 'node/%',
-    'link_title' => 'Program',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Program',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '1',
-    'expanded' => '1',
-    'weight' => '-46',
-    'uuid' => '82568654-06d2-11e0-a3ab-29212d7dea21',
-  );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Program');
   t('Your schedule');
 
 
