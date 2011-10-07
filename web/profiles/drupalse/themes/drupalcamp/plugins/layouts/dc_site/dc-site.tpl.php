@@ -9,6 +9,12 @@
 ?>
 <div<?php print $css_id ? " id=\"$css_id\"" : ''; ?> class="page-wrapper clear-block">
   <div class="site container-14 clear-block">
+    
+    <?php if (!empty($content['service'])): ?>
+      <div class="site-service grid-12 push-1">
+        <?php print $content['service']; ?>
+      </div>
+    <?php endif; ?>
 	
     <?php if (!empty($content['header'])): ?>
       <div class="site-header grid-12 push-1">
