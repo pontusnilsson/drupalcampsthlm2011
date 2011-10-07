@@ -105,7 +105,7 @@ body {
 
 /********* SECONDARY MENU *****************/
 
-.pane-menu-secondary-links {
+.menu-name-secondary-links {
   float:right;
   background: url(../images/bg-white.png) 0px -10px;
   padding:5px;
@@ -117,7 +117,7 @@ body {
   border-bottom-left-radius: 5px;
 }
 
-.pane-menu-secondary-links ul {
+.menu-name-secondary-links ul {
   float:left;
   background-color:#FFFFFF;
   padding:3px;
@@ -129,23 +129,23 @@ body {
   border-bottom-left-radius: 3px;
 }
 
-.pane-menu-secondary-links ul li {
+.menu-name-secondary-links ul li {
   list-style-type:none;
   list-style-image:none; 
   float:left;
   padding:0 16px;
 }
 
-.pane-menu-secondary-links ul li a,
-.pane-menu-secondary-links ul li a:link,
-.pane-menu-secondary-links ul li a:visited{
+.menu-name-secondary-links ul li a,
+.menu-name-secondary-links ul li a:link,
+.menu-name-secondary-links ul li a:visited{
   font-size:16px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#666;
   text-transform:uppercase;
 }
-.pane-menu-secondary-links ul li a:hover,
-.pane-menu-secondary-links ul li a.active {
+.menu-name-secondary-links ul li a:hover,
+.menu-name-secondary-links ul li a.active {
   color:#56A79E;
 }
 
