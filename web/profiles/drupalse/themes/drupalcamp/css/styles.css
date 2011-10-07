@@ -509,5 +509,15 @@ thead th {
  * User register button
  */
  #boxes-box-drupalse_registerpromo .register {
-   background-color: black;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;  
+  border-radius: 7px 7px 7px 7px;
+  color: #55A69E;
+  display: block;
+  font-size: 17.6px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 10px auto 0;
+  padding: 6px;
+  text-align: center;
+  width: 94%;
 }
