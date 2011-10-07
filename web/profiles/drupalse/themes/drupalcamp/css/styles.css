@@ -333,3 +333,39 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   padding: 1em;
   vertical-align: middle;
 }
+
+/************** USER REGISTER FORM *********/
+
+#user-register fieldset {
+  background: url(../images/bg-white.png) 0px -10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid #666;
+  margin:10px 0;
+}
+
+#user-register input {
+  width:400px;
+}
+
+#user-register #edit-profile-first-wrapper,
+#user-register #edit-profile-last-wrapper,
+#user-register #edit-profile-org-wrapper,
+#user-register #edit-profile-job-title-wrapper,
+#user-register #edit-profile-interests-wrapper {
+  float:left;
+  width:400px;
+  margin:10px 30px 10px 0px;
+}
+
+#user-register #edit-profile-interests-wrapper {
+  width:100%;
+}
+
+#edit-profile-interests {
+ resize:none;
+ width:100%;
+}
+
+
