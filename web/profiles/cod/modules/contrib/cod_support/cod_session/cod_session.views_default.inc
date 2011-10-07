@@ -749,7 +749,7 @@ function cod_session_views_default_views() {
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
     'title' => array(
-      'label' => 'Session',
+      'label' => 'Name',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -781,11 +781,43 @@ function cod_session_views_default_views() {
         'button' => 'Override',
       ),
     ),
-    'field_speakers_uid' => array(
-      'label' => 'Speaker(s)',
+    'teaser' => array(
+      'label' => '',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 1,
+        'max_length' => '400',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'exclude' => 0,
+      'id' => 'teaser',
+      'table' => 'node_revisions',
+      'field' => 'teaser',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'field_speakers_uid' => array(
+      'label' => 'Speaker(s)',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => 'Speaker(s): [field_speakers_uid]',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
@@ -820,35 +852,6 @@ function cod_session_views_default_views() {
       'override' => array(
         'button' => 'Override',
       ),
-      'relationship' => 'none',
-    ),
-    'teaser' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 1,
-        'max_length' => '200',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => 0,
-      'id' => 'teaser',
-      'table' => 'node_revisions',
-      'field' => 'teaser',
       'relationship' => 'none',
     ),
     'field_accepted_value' => array(
@@ -986,51 +989,6 @@ function cod_session_views_default_views() {
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
-    'field_track_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_track_value_many_to_one_op',
-        'identifier' => 'field_track_value_many_to_one',
-        'label' => 'Track',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_track_value_many_to_one',
-      'table' => 'node_data_field_track',
-      'field' => 'field_track_value_many_to_one',
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-    ),
-    'keys' => array(
-      'operator' => 'optional',
-      'value' => '',
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'keys_op',
-        'identifier' => 'keys',
-        'label' => 'Filter by keywords:',
-        'optional' => 1,
-        'remember' => 0,
-      ),
-      'id' => 'keys',
-      'table' => 'search_index',
-      'field' => 'keys',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
     'field_accepted_value_many_to_one' => array(
       'operator' => 'or',
       'value' => array(
@@ -1059,16 +1017,15 @@ function cod_session_views_default_views() {
     ),
   ));
   $handler->override_option('access', array(
-    'type' => 'perm',
-    'perm' => 'access content',
+    'type' => 'none',
   ));
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('css_class', 'view-grouped-list sessions-list');
+  $handler->override_option('css_class', 'view-grouped-list sessions-list drupalcamp-table');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 0);
-  $handler->override_option('empty', 'No sessions have been submitted.');
+  $handler->override_option('empty', 'No sessions found.');
   $handler->override_option('empty_format', '1');
   $handler->override_option('items_per_page', 20);
   $handler->override_option('use_pager', '1');
@@ -1848,51 +1805,6 @@ function cod_session_views_default_views() {
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
-    'field_track_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_track_value_many_to_one_op',
-        'identifier' => 'field_track_value_many_to_one',
-        'label' => 'Track',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_track_value_many_to_one',
-      'table' => 'node_data_field_track',
-      'field' => 'field_track_value_many_to_one',
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-    ),
-    'keys' => array(
-      'operator' => 'optional',
-      'value' => '',
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'keys_op',
-        'identifier' => 'keys',
-        'label' => 'Filter by keywords:',
-        'optional' => 1,
-        'remember' => 0,
-      ),
-      'id' => 'keys',
-      'table' => 'search_index',
-      'field' => 'keys',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
     'field_accepted_value_many_to_one' => array(
       'operator' => 'not',
       'value' => array(
@@ -1920,7 +1832,7 @@ function cod_session_views_default_views() {
       'reduce_duplicates' => 0,
     ),
   ));
-  $handler->override_option('pane_title', 'Sessions proposals (Proposed)');
+  $handler->override_option('pane_title', 'Sessions Pane');
   $handler->override_option('pane_description', '');
   $handler->override_option('pane_category', array(
     'name' => 'View panes',

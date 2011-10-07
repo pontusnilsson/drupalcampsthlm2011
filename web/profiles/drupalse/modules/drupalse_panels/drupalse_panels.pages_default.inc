@@ -213,11 +213,14 @@ function drupalse_panels_default_page_manager_handlers() {
     $pane = new stdClass;
     $pane->pid = 'new-1';
     $pane->panel = 'header';
-    $pane->type = 'page_logo';
-    $pane->subtype = 'page_logo';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-secondary-links';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -229,6 +232,23 @@ function drupalse_panels_default_page_manager_handlers() {
     $display->panels['header'][0] = 'new-1';
     $pane = new stdClass;
     $pane->pid = 'new-2';
+    $pane->panel = 'header';
+    $pane->type = 'page_logo';
+    $pane->subtype = 'page_logo';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['header'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
     $pane->panel = 'header';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -250,11 +270,11 @@ function drupalse_panels_default_page_manager_handlers() {
       'css_class' => 'push-5',
     );
     $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-2'] = $pane;
-    $display->panels['header'][1] = 'new-2';
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['header'][2] = 'new-3';
     $pane = new stdClass;
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'main';
     $pane->type = 'page_primary_links';
     $pane->subtype = 'page_primary_links';
@@ -271,10 +291,10 @@ function drupalse_panels_default_page_manager_handlers() {
     );
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-3'] = $pane;
-    $display->panels['main'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['main'][0] = 'new-4';
     $pane = new stdClass;
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'main';
     $pane->type = 'pane_messages';
     $pane->subtype = 'pane_messages';
@@ -291,10 +311,10 @@ function drupalse_panels_default_page_manager_handlers() {
     );
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-4'] = $pane;
-    $display->panels['main'][1] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['main'][1] = 'new-5';
     $pane = new stdClass;
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'main';
     $pane->type = 'page_content';
     $pane->subtype = 'page_content';
@@ -315,10 +335,10 @@ function drupalse_panels_default_page_manager_handlers() {
     );
     $pane->extras = array();
     $pane->position = 2;
-    $display->content['new-5'] = $pane;
-    $display->panels['main'][2] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['main'][2] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-4';
+  $display->title_pane = 'new-5';
   $handler->conf['display'] = $display;
   $export['site_template_panel_context_2'] = $handler;
 
