@@ -277,6 +277,9 @@ function cod_community_views_default_views() {
   ));
   $handler->override_option('title', 'Community');
   $handler->override_option('css_class', 'drupalcamp-table');
+  $handler->override_option('header', 'This is a list of everyone attending DrupalCamp Stockholm.');
+  $handler->override_option('header_format', '1');
+  $handler->override_option('header_empty', 0);
   $handler->override_option('empty', 'No one has signed up for this event. Attendees will appear as they sign up.');
   $handler->override_option('empty_format', '1');
   $handler->override_option('items_per_page', 100);
@@ -287,16 +290,16 @@ function cod_community_views_default_views() {
     'sticky' => 1,
     'order' => 'asc',
     'columns' => array(
-      'picture' => 'value_4',
+      'picture_1' => 'picture_1',
       'name' => 'name',
       'value_4' => 'value_4',
-      'value_5' => 'value_4',
+      'value_5' => 'value_5',
       'value_1' => 'value_1',
       'value_3' => 'value_3',
       'value' => 'value',
     ),
     'info' => array(
-      'picture' => array(
+      'picture_1' => array(
         'sortable' => 0,
         'separator' => '',
       ),
@@ -507,7 +510,7 @@ function cod_community_views_default_views() {
       'relationship' => 'none',
     ),
     'name' => array(
-      'label' => 'Name',
+      'label' => 'User name',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -532,11 +535,14 @@ function cod_community_views_default_views() {
       'link_to_user' => 0,
       'overwrite_anonymous' => 0,
       'anonymous_text' => '',
-      'exclude' => 1,
+      'exclude' => 0,
       'id' => 'name',
       'table' => 'users',
       'field' => 'name',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
     ),
     'value_4' => array(
       'label' => 'Name',
@@ -633,6 +639,9 @@ function cod_community_views_default_views() {
       'table' => 'profile_values_profile_job_title',
       'field' => 'value',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
     ),
     'value_3' => array(
       'label' => 'Organization',
@@ -689,11 +698,14 @@ function cod_community_views_default_views() {
       'empty_zero' => 0,
       'type' => 'separator',
       'separator' => ', ',
-      'exclude' => 0,
+      'exclude' => 1,
       'id' => 'value',
       'table' => 'profile_values_profile_interests',
       'field' => 'value',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
     ),
   ));
   $handler->override_option('pane_title', '');
