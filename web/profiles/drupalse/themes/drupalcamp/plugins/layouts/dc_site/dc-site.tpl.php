@@ -11,7 +11,7 @@
   <div class="site container-14 clear-block">
     
     <?php if (!empty($content['service'])): ?>
-      <div class="site-service grid-12 push-1">
+      <div class="site-service grid-14">
         <?php print $content['service']; ?>
       </div>
     <?php endif; ?>
@@ -29,7 +29,7 @@
     <?php endif; ?>
 
 	  <?php if (!empty($content['footer'])): ?>
-      <div class="site-footer grid-12 push-1">
+      <div class="site-footer grid-14">
         <?php print $content['footer']; ?>
       </div>
     <?php endif; ?>
