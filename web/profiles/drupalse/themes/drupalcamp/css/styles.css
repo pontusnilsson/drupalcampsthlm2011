@@ -157,9 +157,18 @@ div.messages.error {
 /**
  * Front page specific
  */
-#front-sponsors .sponsor {
-  float:left;
+#front-sponsors .sponsor {  
   margin-right: 7px;
+}
+
+#front-sponsors td {
+  height: 40px;
+  text-align: center;
+  width: 200px;
+}
+
+#front-sponsors td img {
+  vertical-align: middle;
 }
 
 #front-sponsors h2.pane-title {
@@ -205,7 +214,7 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   position:relative;
 }
 
-.view-Sponsors td.col-1 {
+.sponsor-page td.col-1 {
   padding-left: 50px;
   padding-right: 20px;
 }

@@ -916,6 +916,15 @@ function cod_sponsors_views_default_views() {
       'relationship' => 'none',
     ),
   ));
+  $handler->override_option('row_options', array(
+    'semantic_html' => array(
+      'field_logo_fid' => array(
+        'element_type' => 'div',
+        'class' => 'logo',
+      ),
+    ),
+    'skip_blank' => 0,
+  ));
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
@@ -980,25 +989,11 @@ function cod_sponsors_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('style_plugin', 'semanticviews_default');
   $handler->override_option('style_options', array(
     'grouping' => '',
-    'group' => array(
-      'element_type' => 'h3',
-      'class' => 'title',
-    ),
-    'list' => array(
-      'element_type' => '',
-      'class' => '',
-    ),
-    'row' => array(
-      'element_type' => 'div',
-      'class' => 'sponsor',
-      'last_every_nth' => '0',
-      'first_class' => 'first',
-      'last_class' => 'last',
-      'striping_classes' => 'odd even',
-    ),
+    'columns' => '8',
+    'alignment' => 'horizontal',
+    'fill_single_line' => 1,
   ));
   $handler->override_option('pane_title', 'Sponsors All (Pane)');
   $handler->override_option('pane_description', '');

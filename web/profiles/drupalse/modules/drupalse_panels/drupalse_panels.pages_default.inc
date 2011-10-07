@@ -769,7 +769,10 @@ function drupalse_panels_default_page_manager_pages() {
   $page->admin_title = 'Front';
   $page->admin_description = '';
   $page->path = 'home';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Home',
@@ -1291,7 +1294,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sponsor-page sponsor-page-organizing',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-1'] = $pane;
@@ -1323,7 +1329,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sponsor-page sponsor-page-silver',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $display->content['new-2'] = $pane;
@@ -1355,7 +1364,10 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sponsor-page sponsor-page-silver',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $display->content['new-3'] = $pane;

@@ -39,7 +39,7 @@ function drupalse_imagestyles_imagecache_default_presets() {
           'action' => 'imagecache_scale',
           'data' => array(
             'width' => '',
-            'height' => '50',
+            'height' => '40',
             'upscale' => 0,
           ),
         ),
