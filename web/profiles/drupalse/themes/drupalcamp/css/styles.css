@@ -283,6 +283,11 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   position:relative;
 }
 
+div.tweets-pulled-listing ul {
+  padding:0;
+  margin:0;
+}
+
 .sponsor-page td {
   padding: 5px;
   vertical-align: middle;
