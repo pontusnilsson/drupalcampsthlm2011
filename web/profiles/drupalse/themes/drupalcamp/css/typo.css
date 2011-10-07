@@ -44,3 +44,13 @@ h1 a, h2 a, h3 a {
  p {
    margin-bottom:1em;
  }
+
+ ul {
+    list-style: disc outside none;
+    margin: 1em 0;
+    padding-left: 1em;
+}
+
+ul li {
+  margin: 5px 0;
+}
