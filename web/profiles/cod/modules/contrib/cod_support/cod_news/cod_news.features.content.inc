@@ -14,14 +14,14 @@ function cod_news_content_default_fields() {
       'weight' => '-3',
       'parent' => '',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'image_plain',
+        'format' => 'drupalse_pagecontent_default',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'image_plain',
+        'format' => 'drupalse_pagecontent_default',
         'exclude' => 0,
       ),
       '4' => array(

@@ -1,7 +1,7 @@
 <VirtualHost *:80>
 
-  ServerName cod.fall2011.drupalcamp.se:80
-  ServerAlias www.cod.fall2011.drupalcamp.se dev.cod.fall2011.drupalcamp.se loc.cod.fall2011.drupalcamp.se
+  ServerName fall2011.drupalcamp.se:80
+  ServerAlias www.fall2011.drupalcamp.se dev.fall2011.drupalcamp.se loc.fall2011.drupalcamp.se
 
   DocumentRoot /srv/www/002/web
 
@@ -72,11 +72,11 @@
       RewriteRule ^update.php$ - [L]
 
       # Enforce domain.
-      RewriteCond %{HTTP_HOST} !^cod.fall2011.drupalcamp.se(:.*)?$
-      RewriteCond %{HTTP_HOST} !^dev.cod.fall2011.drupalcamp.se(:.*)?$
-      RewriteCond %{HTTP_HOST} !^loc.cod.fall2011.drupalcamp.se(:.*)?$
+      RewriteCond %{HTTP_HOST} !^fall2011.drupalcamp.se(:.*)?$
+      RewriteCond %{HTTP_HOST} !^dev.fall2011.drupalcamp.se(:.*)?$
+      RewriteCond %{HTTP_HOST} !^loc.fall2011.drupalcamp.se(:.*)?$
       RewriteCond %{HTTP_HOST} ^(?:.*?)(:.*)?$
-      RewriteRule ^(.*)$ http://cod.fall2011.drupalcamp.se%1/$1 [L,R=301]
+      RewriteRule ^(.*)$ http://fall2011.drupalcamp.se%1/$1 [L,R=301]
 
       # Route requests to Drupal's front controller.
       RewriteCond %{REQUEST_FILENAME} !-f

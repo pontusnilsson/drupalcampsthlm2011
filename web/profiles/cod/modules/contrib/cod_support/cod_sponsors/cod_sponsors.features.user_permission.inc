@@ -29,7 +29,6 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'edit any sponsor content',
     'roles' => array(
       '0' => 'site administrator',
-      '1' => 'sponsor organizer',
     ),
   );
 

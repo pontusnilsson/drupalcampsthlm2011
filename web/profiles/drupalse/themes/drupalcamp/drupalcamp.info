@@ -19,4 +19,5 @@ stylesheets[all][] = css/styles.css
 ; Stylesheet to use for grid debugging
 ;stylesheets[all][] = css/regions.css
 
-
+scripts[] = scripts/infieldlabels/infieldlabels.min.js
+scripts[] = scripts/script.js

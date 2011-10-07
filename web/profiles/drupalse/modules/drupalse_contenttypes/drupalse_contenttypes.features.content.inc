@@ -48,10 +48,10 @@ function drupalse_contenttypes_content_default_fields() {
     'active' => '1',
     'text_processing' => '0',
     'max_length' => '',
-    'allowed_values' => 'site|Best swedish site
-drupalist|Best swedish drupalist
-design|Best swedish design
-technology|Best swedish technology',
+    'allowed_values' => 'site|Best Swedish site
+drupalist|Best Swedish drupalist
+design|Best Swedish design
+technology|Best Swedish technology',
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => array(

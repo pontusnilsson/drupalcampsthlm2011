@@ -70,7 +70,6 @@ function cod_base_user_default_permissions() {
     'roles' => array(
       '0' => 'session organizer',
       '1' => 'site administrator',
-      '2' => 'sponsor organizer',
     ),
   );
 
