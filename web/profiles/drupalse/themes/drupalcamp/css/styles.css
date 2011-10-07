@@ -103,8 +103,9 @@ body {
   list-style-type: none;
 }
 
-/********* SECONDARY MENU *****************/
-
+/**
+ * Secondary menu
+ */
 .menu-name-secondary-links {
   float:right;
   background-color:#5e8371;
@@ -283,10 +284,6 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 /**
  * Table design
  */
- .drupalcamp-table {
-   
-}
-
 .drupalcamp-table tr.odd {
   background-color:#f6fcfa;
   border-bottom:1px solid #55A69E;
@@ -325,4 +322,41 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 .drupalcamp-table td {
   padding: 1em;
   vertical-align: middle;
+}
+
+/**
+ * Input fields, submit buttons
+ */
+input,
+textarea {
+  border:1px solid #55A69E;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 4px;
+  padding:5px;
+}
+
+input.form-text,
+textarea {
+  -moz-box-shadow: inset 0 0 4px #f5f6f8;
+  -webkit-box-shadow: inset 0 0 4px#f5f6f8;
+  box-shadow: inner 0 0 4px #f5f6f8;
+}
+
+input.form-submit {
+  background-color:#9b9798;
+  border-color: #9b9798;
+  color:#fff;
+}
+
+html.js input.form-autocomplete {
+  background-position: 100% 8px;
+}
+
+table.tabledrag-processed tr {
+  background:none;
+}
+
+thead th {
+  border-bottom: 3px solid transparent;
 }
