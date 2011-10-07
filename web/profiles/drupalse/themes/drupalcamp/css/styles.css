@@ -34,9 +34,9 @@ body {
 
 #mission {
   background: url(../images/bg-mission.png) top left no-repeat;
-  padding: 100px 120px 0 30px;
+  padding: 90px 120px 0 30px;
   width: 422px; /* 572 - 120 - 30 */
-  height: 50px; /* 150 - 100 */
+  height: 60px; /* 150 - 90 */
   position: absolute;
   top: 0;
   right: 0;
