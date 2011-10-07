@@ -830,25 +830,12 @@ function drupalse_panels_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-1';
     $pane->panel = 'content';
-    $pane->type = 'views';
-    $pane->subtype = 'news';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 1,
-      'nodes_per_page' => '10',
-      'pager_id' => '',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'page_1',
-      'override_title' => 0,
-      'override_title_text' => '',
+      'items_per_page' => '10',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -991,7 +978,7 @@ function drupalse_panels_default_page_manager_pages() {
     $display->content['new-7'] = $pane;
     $display->panels['sidebar_left'][3] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['drupalse_front'] = $page;
@@ -1501,6 +1488,46 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->position = 0;
     $display->content['new-1'] = $pane;
     $display->panels['content'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_ticket';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-2'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_registerpromo';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-3'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
