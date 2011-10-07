@@ -59,6 +59,20 @@ body {
   padding: 20px;
 }
 
+.site-footer .panel-pane {
+  padding:1em;
+  text-align: center;
+  background:#fff;
+  margin-top:1em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.site-footer .panel-pane p {
+  margin:0;
+}
+
 .page-sidebar-left .panel-pane {
   border-bottom: 1px solid #e9e9e9;
   padding-bottom: 1em;
@@ -111,9 +125,9 @@ body {
 /**
  * Secondary menu
 */
-.menu-name-secondary-links {
+.site-service .menu-name-secondary-links {
   float:right;
-  background-color:#5e8371;
+  background-image: url('../images/bg-black.png');
   padding:4px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -123,22 +137,22 @@ body {
   border-bottom-left-radius: 5px;
 }
 
-.menu-name-secondary-links ul li {
+.site-service .menu-name-secondary-links ul li {
   list-style-type:none;
   list-style-image:none; 
   float:left;
   padding:0 10px;
 }
 
-.menu-name-secondary-links ul li a,
-.menu-name-secondary-links ul li a:link,
-.menu-name-secondary-links ul li a:visited{
+.site-service .menu-name-secondary-links ul li a,
+.site-service .menu-name-secondary-links ul li a:link,
+.site-service .menu-name-secondary-links ul li a:visited{
   font-size:14px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#fff;  
 }
-.menu-name-secondary-links ul li a:hover,
-.menu-name-secondary-links ul li a.active {
+.site-service .menu-name-secondary-links ul li a:hover,
+.site-service .menu-name-secondary-links ul li a.active {
   color:#fff;  
 }
 
@@ -159,7 +173,7 @@ ul.tabs.primary {
 
 .pane-pane-messages .tabs ul {
   border: 0 none;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   padding: 0;
 }
 
@@ -230,9 +244,11 @@ div.tweets-pulled-listing a {
   background-image: url("../images/twitter-bird.png");
   background-position: right 2px;
   background-repeat: no-repeat;
-  font-size: 20.6px;
-  font-style: italic;
+  font-size: 20.6px;  
   font-weight: normal;
+  font-famliy: "HelveticaNeue-Light", "Helvetica Neue Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
   height: 59px;
   margin-bottom: 0;
   padding: 10px 10px 0 0;
@@ -338,8 +354,7 @@ fieldset {
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin:10px 0;
-  background-color: #CCC;
-  background-image: url("../images/bg-black.png");
+  background-color: #DDDDDD;
 }
 
 /**
@@ -427,10 +442,37 @@ input.form-submit:hover {
  width:400px;
 }
 
-#user-register #edit-submit {
+#user-register #edit-submit,
+#user-login  #edit-submit,
+#user-pass #edit-submit {
   width:200px;
   margin:0;
   font-size: 16px;
+}
+
+/**
+ * Input fields, submit buttons
+*/
+input,
+textarea {
+  border:1px solid #55A69E;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 4px;
+  padding:5px;
+}
+
+input.form-text,
+textarea {
+  -moz-box-shadow: inset 0 0 4px #f5f6f8;
+  -webkit-box-shadow: inset 0 0 4px#f5f6f8;
+  box-shadow: inner 0 0 4px #f5f6f8;
+}
+
+input.form-submit {
+  background-color:#9b9798;
+  border-color: #9b9798;
+  color:#ffffff;
 }
 
 html.js input.form-autocomplete {
@@ -446,10 +488,10 @@ thead th {
 }
 
 /**
- *
-*/
+ * User login pane
+ */
 .pane-user-0 input.form-text{
-  padding:8px;
+  padding:8px 8px 12px 8px;
 }
 
 .pane-user-0 .form-required {
@@ -475,10 +517,10 @@ thead th {
 
 .pane-user-0 input#edit-submit {
   float:left;
-  margin-top: 7px;
+  margin-top:6px;
   margin-bottom: 1em;
   margin-left: 28px;
-  padding:8px;
+  padding:9px 12px;
 }
 
 .pane-user-0 div.item-list {
@@ -505,10 +547,26 @@ thead th {
 
 .pane-user-0 div#edit-pass-wrapper label,
 .pane-user-0 div#edit-name-wrapper label { 
-  position:absolute; top:10px; left:12px;
+  position:absolute; top:9px; left:12px;
   font-size:13px;
   font-weight:normal;
   font-style: italic;
   color:#676767;
 }
 
+/**
+ * User register button
+ */
+ #boxes-box-drupalse_registerpromo .register {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;  
+  border-radius: 7px 7px 7px 7px;
+  color: #55A69E;
+  display: block;
+  font-size: 17.6px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 10px auto 0;
+  padding: 6px;
+  text-align: center;
+  width: 94%;
+}
