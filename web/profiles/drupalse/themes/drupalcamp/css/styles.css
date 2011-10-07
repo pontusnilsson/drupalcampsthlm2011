@@ -378,6 +378,10 @@ textarea {
   padding:5px 0;
 }
 
+#edit-picture-upload-register {
+  border:none;
+}
+
 input.form-text,
 textarea {
   -moz-box-shadow: inset 0 0 4px #f5f6f8;
