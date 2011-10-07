@@ -3,3 +3,4 @@ description = Form alters and all that shit
 core = 6.x
 dependencies[] = "reg_with_pic"
 dependencies[] = "messages_alter"
+dependencies[] = "mollom"
