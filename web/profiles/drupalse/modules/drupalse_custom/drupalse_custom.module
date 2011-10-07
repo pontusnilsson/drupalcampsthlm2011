@@ -8,9 +8,12 @@ function drupalse_custom_form_alter(&$form, &$form_state, $form_id) {
     $form['signup']['#access'] = FALSE;
     $form["Personal information"]["#weight"] = 0;
     $form["Personal information"]['profile_interests']['#resizable'] = false;
-    
-    var_dump($form["Personal information"]['profile_interests']);
-    
+  }
+
+  if($form['#id'] == 'node-form') {
+    if (isset($form['buttons']['preview'])) {
+      unset($form['buttons']['preview']);
+    }
   }
 }
 
