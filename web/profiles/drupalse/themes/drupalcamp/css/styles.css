@@ -230,3 +230,45 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 .view-Sponsors.view-display-id-block_2 td.col-2 {
   
 }
+
+/**
+ * Table design
+ */
+ .drupalcamp-table {
+   
+}
+
+.drupalcamp-table tr.odd {
+  background-color:#f6fcfa;
+  border-bottom:1px solid #55A69E;
+}
+
+.drupalcamp-table thead th {
+  border-bottom:1px solid #55A69E;
+  padding: 1em;
+}
+
+.drupalcamp-table tr.even {
+  background:none;
+  border-bottom:1px solid #55A69E;
+}
+
+.drupalcamp-table td.odd {
+  border-right:1px solid #55A69E;
+}
+
+.drupalcamp-table td.views-field-title {
+  border-right:1px solid #55A69E;
+}
+
+.drupalcamp-table td.even {
+  border-right:1px solid #55A69E;
+}
+
+.drupalcamp-table td.last {
+  border-right:none;
+}
+
+.drupalcamp-table td {
+  padding: 1em;
+}
