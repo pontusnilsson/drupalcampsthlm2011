@@ -368,7 +368,7 @@ function cod_sponsors_views_default_views() {
   $handler->override_option('header_empty', 0);
   $handler->override_option('style_options', array(
     'grouping' => '',
-    'columns' => '3',
+    'columns' => '4',
     'alignment' => 'horizontal',
     'fill_single_line' => 1,
   ));
@@ -844,7 +844,7 @@ function cod_sponsors_views_default_views() {
       'empty_zero' => 0,
       'link_to_node' => 1,
       'label_type' => 'none',
-      'format' => 'drupalse_gold_linked',
+      'format' => 'drupalse_organizing_linked',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -915,6 +915,12 @@ function cod_sponsors_views_default_views() {
       ),
       'relationship' => 'none',
     ),
+  ));
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'columns' => '3',
+    'alignment' => 'horizontal',
+    'fill_single_line' => 1,
   ));
   $handler->override_option('row_options', array(
     'semantic_html' => array(
