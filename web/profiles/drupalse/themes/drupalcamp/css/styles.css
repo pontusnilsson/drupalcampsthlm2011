@@ -1,10 +1,10 @@
 /**
  * Style for DrupalCamp Fall 2011
- */
+*/
 
- /**
- * Site layout style and graphics for wrappers, header etc
- */
+/**
+* Site layout style and graphics for wrappers, header etc
+*/
 body {
   margin: 0;
   background: #e9eae3 url(../images/bg-header.jpg) top center repeat-x;
@@ -59,9 +59,14 @@ body {
   padding: 20px;
 }
 
+.page-sidebar-left .panel-pane {
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 1em;
+}
+
 /**
  * Navigation
- */
+*/
 #navigation li.first {
   padding-left: 0;
 }
@@ -105,7 +110,7 @@ body {
 
 /**
  * Secondary menu
- */
+*/
 .menu-name-secondary-links {
   float:right;
   background-color:#5e8371;
@@ -139,9 +144,9 @@ body {
 
 /**
  * Tabs
- */
+*/
 ul.tabs.primary {
-    margin:5px 5px 5px 0;
+  margin:5px 5px 5px 0;
 }
 
 .pane-pane-messages .tabs ul.primary a {
@@ -160,7 +165,7 @@ ul.tabs.primary {
 
 /**
  * Messages styling
- */
+*/
 div.messages {
   border: 7px solid;
   margin: 10px 0;
@@ -192,7 +197,7 @@ div.messages.error {
 
 /**
  * Front page specific
- */
+*/
 #front-sponsors .sponsor {  
   margin-right: 7px;
 }
@@ -208,15 +213,17 @@ div.messages.error {
 }
 
 #front-sponsors h2.pane-title {
-  font-style:italic;
-  font-weight:normal;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: -5px;
   margin-top: -10px;
 }
 /**
  * Twitter
- */
- div.tweets-pulled-listing a {
-   color: #55A69E;
+*/
+div.tweets-pulled-listing a {
+  color: #55A69E;
 }
 
 .twitter-pane h2.pane-title {
@@ -242,7 +249,7 @@ div.tweets-pulled-listing .tweet-time a {
 }
 
 div.tweets-pulled-listing .tweet-text {
-  
+
 }
 
 div.tweets-pulled-listing .tweet-author {
@@ -270,7 +277,7 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 }
 
 .view-Sponsors td.col-2 {
-  
+
 }
 
 .view-Sponsors.view-display-id-block_2 .view-Sponsors td.col-1 {
@@ -278,12 +285,12 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 }
 
 .view-Sponsors.view-display-id-block_2 td.col-2 {
-  
+
 }
 
 /**
  * Table design
- */
+*/
 .drupalcamp-table tr.odd {
   background-color:#f6fcfa;
   border-bottom:1px solid #55A69E;
@@ -385,7 +392,7 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 
 /**
  * Input fields, submit buttons
- */
+*/
 input,
 textarea {
   border:1px solid #55A69E;
@@ -418,5 +425,72 @@ table.tabledrag-processed tr {
 
 thead th {
   border-bottom: 3px solid transparent;
+}
+
+/**
+ *
+*/
+.pane-user-0 input.form-text{
+  padding:8px;
+}
+
+.pane-user-0 .form-required {
+  display:none;
+}
+
+.pane-user-0 div#edit-name-wrapper,
+.pane-user-0 div#edit-pass-wrapper {
+  position:relative;
+  text-align:left;
+  margin:5px 0px;
+}
+
+.pane-user-0 div#edit-name-wrapper input,
+.pane-user-0 div#edit-pass-wrapper input {
+  width:150px;
+}
+
+.pane-user-0 div#edit-pass-wrapper {
+  width:150px;
+  float:left;  
+}
+
+.pane-user-0 input#edit-submit {
+  float:left;
+  margin-top: 7px;
+  margin-bottom: 1em;
+  margin-left: 28px;
+  padding:8px;
+}
+
+.pane-user-0 div.item-list {
+  clear:both;
+  text-align: left;
+  overflow: hidden;
+}
+
+.pane-user-0 div.item-list ul li {
+  list-style: none;
+  margin:0;
+  float:left;
+}
+
+.pane-user-0 div.item-list ul li.first {
+  margin-right:5px;
+}
+
+.pane-user-0 div.item-list ul li a {
+  font-size:12px;
+  color:#71716F;
+}
+
+
+.pane-user-0 div#edit-pass-wrapper label,
+.pane-user-0 div#edit-name-wrapper label { 
+  position:absolute; top:10px; left:12px;
+  font-size:13px;
+  font-weight:normal;
+  font-style: italic;
+  color:#676767;
 }
 
