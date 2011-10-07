@@ -177,7 +177,7 @@ ul.tabs.primary {
 
 .pane-pane-messages .tabs ul {
   border: 0 none;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   padding: 0;
 }
 
@@ -356,16 +356,45 @@ div.tweets-pulled-listing ul {
   vertical-align: middle;
 }
 
-
 /************** USER REGISTER FORM *********/
 
-#user-register fieldset {
-  background: url(../images/bg-white.png) 0px -10px;
+fieldset {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin:10px 0;
-  background-color: #666;
+  background-color: #DDDDDD;
+}
+
+/**
+ * Input fields, submit buttons
+*/
+input,
+textarea {
+  border:2px solid #55A69E;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 4px;
+  padding:5px 0;
+}
+
+input.form-text,
+textarea {
+  -moz-box-shadow: inset 0 0 4px #f5f6f8;
+  -webkit-box-shadow: inset 0 0 4px#f5f6f8;
+  box-shadow: inner 0 0 4px #f5f6f8;
+}
+
+input.form-submit {
+  background-color:#9b9798;
+  border-color: #9b9798;
+  color:#fff;
+}
+
+input.form-submit:hover {
+  background-color:#55A69E;
+  border-color: #55A69E;
+  color:#fff;
 }
 
 #user-register input {
@@ -375,8 +404,9 @@ div.tweets-pulled-listing ul {
 #user-register label,
 #user-register fieldset legend {
   color:'#323232';
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:500;
+  padding-bottom: 5px;
 }
 
 #user-register fieldset legend {
@@ -386,18 +416,26 @@ div.tweets-pulled-listing ul {
 
 #user-register .description {
   color:'#323232';
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:300;
 }
 
+#user-register #edit-name-wrapper,
+#user-register #edit-mail-wrapper,
+#user-register #edit-pass-wrapper,
 #user-register #edit-profile-first-wrapper,
 #user-register #edit-profile-last-wrapper,
 #user-register #edit-profile-org-wrapper,
 #user-register #edit-profile-job-title-wrapper,
-#user-register #edit-profile-interests-wrapper {
+#user-register #edit-profile-interests-wrapper,
+#user-register #edit-picture-upload-register-wrapper {
   float:left;
   width:400px;
   margin:10px 10px 10px 22px;
+}
+
+#user-register #edit-pass-wrapper {
+  margin:-30px 10px 10px 22px;
 }
 
 #user-register #edit-profile-interests-wrapper {
@@ -408,11 +446,18 @@ div.tweets-pulled-listing ul {
   width:400px;
 }
 
-#edit-profile-interests {
+#user-register  #edit-profile-interests {
  resize:none;
  width:400px;
 }
 
+#user-register #edit-submit,
+#user-login  #edit-submit,
+#user-pass #edit-submit {
+  width:200px;
+  margin:0;
+  font-size: 16px;
+}
 
 /**
  * Input fields, submit buttons
@@ -436,7 +481,7 @@ textarea {
 input.form-submit {
   background-color:#9b9798;
   border-color: #9b9798;
-  color:#fff;
+  color:#ffffff;
 }
 
 html.js input.form-autocomplete {
@@ -455,7 +500,7 @@ thead th {
  * User login pane
  */
 .pane-user-0 input.form-text{
-  padding:8px;
+  padding:8px 8px 12px 8px;
 }
 
 .pane-user-0 .form-required {
@@ -481,10 +526,10 @@ thead th {
 
 .pane-user-0 input#edit-submit {
   float:left;
-  margin-top: 7px;
+  margin-top:6px;
   margin-bottom: 1em;
   margin-left: 28px;
-  padding:8px;
+  padding:9px 12px;
 }
 
 .pane-user-0 div.item-list {
@@ -511,7 +556,7 @@ thead th {
 
 .pane-user-0 div#edit-pass-wrapper label,
 .pane-user-0 div#edit-name-wrapper label { 
-  position:absolute; top:10px; left:12px;
+  position:absolute; top:9px; left:12px;
   font-size:13px;
   font-weight:normal;
   font-style: italic;
@@ -560,3 +605,4 @@ thead th {
   margin:0;
   padding-left:0;
 }
+
