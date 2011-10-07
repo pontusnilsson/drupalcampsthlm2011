@@ -8,3 +8,11 @@ function drupalse_custom_form_alter(&$form, &$form_state, $form_id) {
     $form['signup']['#access'] = FALSE;
   }
 }
+
+/**
+ * Implements of hook_custom_message_alter().
+ */
+function drupalse_custom_message_alter(&$messages) {
+  $matches = $messages->contains('A confirmation email will be sent shortly');
+  $messages->remove($matches);
+}
