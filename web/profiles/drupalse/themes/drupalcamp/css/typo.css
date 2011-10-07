@@ -11,7 +11,8 @@ body {
  * Headlines
  */
 h1 {
-  font-size: 28px bold;
+  font-size: 28px;
+  font-weight:bold;
   color:#323232;
 }
 
