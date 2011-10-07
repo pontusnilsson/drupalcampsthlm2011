@@ -13,8 +13,18 @@ function drupalse_imagestyles_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '217',
+            'width' => '155',
             'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '',
+            'height' => '80',
             'upscale' => 0,
           ),
         ),
@@ -53,8 +63,18 @@ function drupalse_imagestyles_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '560',
+            'width' => '155',
             'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '',
+            'height' => '80',
             'upscale' => 0,
           ),
         ),
@@ -103,8 +123,18 @@ function drupalse_imagestyles_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '175',
+            'width' => '140',
             'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '',
+            'height' => '50',
             'upscale' => 0,
           ),
         ),
