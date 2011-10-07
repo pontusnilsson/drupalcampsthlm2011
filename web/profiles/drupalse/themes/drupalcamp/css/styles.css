@@ -59,6 +59,16 @@ body {
   padding: 20px;
 }
 
+.site-footer .panel-pane {
+  padding:1em;
+  text-align: center;
+  background:#fff;
+  margin-top:1em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
 .page-sidebar-left .panel-pane {
   border-bottom: 1px solid #e9e9e9;
   padding-bottom: 1em;
@@ -111,9 +121,9 @@ body {
 /**
  * Secondary menu
 */
-.menu-name-secondary-links {
+.site-service .menu-name-secondary-links {
   float:right;
-  background-color:#5e8371;
+  background-image: url('../images/bg-black.png');
   padding:4px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -123,22 +133,22 @@ body {
   border-bottom-left-radius: 5px;
 }
 
-.menu-name-secondary-links ul li {
+.site-service .menu-name-secondary-links ul li {
   list-style-type:none;
   list-style-image:none; 
   float:left;
   padding:0 10px;
 }
 
-.menu-name-secondary-links ul li a,
-.menu-name-secondary-links ul li a:link,
-.menu-name-secondary-links ul li a:visited{
+.site-service .menu-name-secondary-links ul li a,
+.site-service .menu-name-secondary-links ul li a:link,
+.site-service .menu-name-secondary-links ul li a:visited{
   font-size:14px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#fff;  
 }
-.menu-name-secondary-links ul li a:hover,
-.menu-name-secondary-links ul li a.active {
+.site-service .menu-name-secondary-links ul li a:hover,
+.site-service .menu-name-secondary-links ul li a.active {
   color:#fff;  
 }
 
@@ -230,9 +240,11 @@ div.tweets-pulled-listing a {
   background-image: url("../images/twitter-bird.png");
   background-position: right 2px;
   background-repeat: no-repeat;
-  font-size: 20.6px;
-  font-style: italic;
+  font-size: 20.6px;  
   font-weight: normal;
+  font-famliy: "HelveticaNeue-Light", "Helvetica Neue Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
   height: 59px;
   margin-bottom: 0;
   padding: 10px 10px 0 0;
@@ -389,7 +401,6 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 }
 
 
-
 /**
  * Input fields, submit buttons
 */
@@ -428,8 +439,8 @@ thead th {
 }
 
 /**
- *
-*/
+ * User login pane
+ */
 .pane-user-0 input.form-text{
   padding:8px;
 }
@@ -494,3 +505,9 @@ thead th {
   color:#676767;
 }
 
+/**
+ * User register button
+ */
+ #boxes-box-drupalse_registerpromo .register {
+   background-color: black;
+}
