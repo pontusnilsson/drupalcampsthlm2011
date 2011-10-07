@@ -15,7 +15,7 @@ body {
 }
 
 #page {
-  background: url("../images/bg-triangles.png") no-repeat scroll 0 478px transparent;
+  background: url("../images/bg-triangles.png") no-repeat scroll 0 515px transparent;
   padding:0px 10px 10px 10px;
   min-height: 820px;
 }
@@ -103,12 +103,13 @@ body {
   list-style-type: none;
 }
 
-/********* SECONDARY MENU *****************/
-
+/**
+ * Secondary menu
+ */
 .menu-name-secondary-links {
   float:right;
-  background: url(../images/bg-white.png) 0px -10px;
-  padding:5px;
+  background-color:#5e8371;
+  padding:4px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
   -moz-border-radius-bottomright: 5px;
@@ -117,36 +118,23 @@ body {
   border-bottom-left-radius: 5px;
 }
 
-.menu-name-secondary-links ul {
-  float:left;
-  background-color:#FFFFFF;
-  padding:3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-
 .menu-name-secondary-links ul li {
   list-style-type:none;
   list-style-image:none; 
   float:left;
-  padding:0 16px;
+  padding:0 10px;
 }
 
 .menu-name-secondary-links ul li a,
 .menu-name-secondary-links ul li a:link,
 .menu-name-secondary-links ul li a:visited{
-  font-size:16px;
+  font-size:14px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#666;
-  text-transform:uppercase;
+  color:#fff;  
 }
 .menu-name-secondary-links ul li a:hover,
 .menu-name-secondary-links ul li a.active {
-  color:#56A79E;
+  color:#fff;  
 }
 
 /**
@@ -232,9 +220,15 @@ div.messages.error {
 }
 
 .twitter-pane h2.pane-title {
-  text-indent: -9999px;
-  background-image: url('../images/twitter-headline.png');
-  height:59px;
+  background-image: url("../images/twitter-bird.png");
+  background-position: right 2px;
+  background-repeat: no-repeat;
+  font-size: 20.6px;
+  font-style: italic;
+  font-weight: normal;
+  height: 59px;
+  margin-bottom: 0;
+  padding: 10px 10px 0 0;
 }
 
 div.tweets-pulled-listing div.tweet-divider {
@@ -290,10 +284,6 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 /**
  * Table design
  */
- .drupalcamp-table {
-   
-}
-
 .drupalcamp-table tr.odd {
   background-color:#f6fcfa;
   border-bottom:1px solid #55A69E;
@@ -334,6 +324,7 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   vertical-align: middle;
 }
 
+
 /************** USER REGISTER FORM *********/
 
 #user-register fieldset {
@@ -341,12 +332,30 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  border:1px solid #666;
   margin:10px 0;
+  background-color: #666;
 }
 
 #user-register input {
   width:400px;
+}
+
+#user-register label,
+#user-register fieldset legend {
+  color:'#323232';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+#user-register fieldset legend {
+  font-weight:bold;
+  padding: 0 0 5px 10px;
+}
+
+#user-register .description {
+  color:'#323232';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 #user-register #edit-profile-first-wrapper,
@@ -356,16 +365,58 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
 #user-register #edit-profile-interests-wrapper {
   float:left;
   width:400px;
-  margin:10px 30px 10px 0px;
+  margin:10px 10px 10px 22px;
 }
 
 #user-register #edit-profile-interests-wrapper {
-  width:100%;
+  margin:-30px 10px 10px 22px;
+}
+
+#user-register #edit-profile-interests-wrapper .description {
+  width:400px;
 }
 
 #edit-profile-interests {
  resize:none;
- width:100%;
+ width:400px;
 }
 
+
+
+/**
+ * Input fields, submit buttons
+ */
+input,
+textarea {
+  border:1px solid #55A69E;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 4px;
+  padding:5px;
+}
+
+input.form-text,
+textarea {
+  -moz-box-shadow: inset 0 0 4px #f5f6f8;
+  -webkit-box-shadow: inset 0 0 4px#f5f6f8;
+  box-shadow: inner 0 0 4px #f5f6f8;
+}
+
+input.form-submit {
+  background-color:#9b9798;
+  border-color: #9b9798;
+  color:#fff;
+}
+
+html.js input.form-autocomplete {
+  background-position: 100% 8px;
+}
+
+table.tabledrag-processed tr {
+  background:none;
+}
+
+thead th {
+  border-bottom: 3px solid transparent;
+}
 
