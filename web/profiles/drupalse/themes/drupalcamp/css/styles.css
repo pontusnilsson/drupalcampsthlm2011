@@ -331,75 +331,27 @@ div.tweets-pulled-listing  .tweet-photo-wrapper {
   vertical-align: middle;
 }
 
-
 /************** USER REGISTER FORM *********/
 
-#user-register fieldset {
-  background: url(../images/bg-white.png) 0px -10px;
+fieldset {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin:10px 0;
-  background-color: #666;
+  background-color: #CCC;
+  background-image: url("../images/bg-black.png");
 }
-
-#user-register input {
-  width:400px;
-}
-
-#user-register label,
-#user-register fieldset legend {
-  color:'#323232';
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-
-#user-register fieldset legend {
-  font-weight:bold;
-  padding: 0 0 5px 10px;
-}
-
-#user-register .description {
-  color:'#323232';
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-
-#user-register #edit-profile-first-wrapper,
-#user-register #edit-profile-last-wrapper,
-#user-register #edit-profile-org-wrapper,
-#user-register #edit-profile-job-title-wrapper,
-#user-register #edit-profile-interests-wrapper {
-  float:left;
-  width:400px;
-  margin:10px 10px 10px 22px;
-}
-
-#user-register #edit-profile-interests-wrapper {
-  margin:-30px 10px 10px 22px;
-}
-
-#user-register #edit-profile-interests-wrapper .description {
-  width:400px;
-}
-
-#edit-profile-interests {
- resize:none;
- width:400px;
-}
-
-
 
 /**
  * Input fields, submit buttons
 */
 input,
 textarea {
-  border:1px solid #55A69E;
+  border:2px solid #55A69E;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 4px;
-  padding:5px;
+  padding:5px 0;
 }
 
 input.form-text,
@@ -413,6 +365,72 @@ input.form-submit {
   background-color:#9b9798;
   border-color: #9b9798;
   color:#fff;
+}
+
+input.form-submit:hover {
+  background-color:#55A69E;
+  border-color: #55A69E;
+  color:#fff;
+}
+
+#user-register input {
+  width:400px;
+}
+
+#user-register label,
+#user-register fieldset legend {
+  color:'#323232';
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:500;
+  padding-bottom: 5px;
+}
+
+#user-register fieldset legend {
+  font-weight:bold;
+  padding: 0 0 5px 10px;
+}
+
+#user-register .description {
+  color:'#323232';
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:300;
+}
+
+#user-register #edit-name-wrapper,
+#user-register #edit-mail-wrapper,
+#user-register #edit-pass-wrapper,
+#user-register #edit-profile-first-wrapper,
+#user-register #edit-profile-last-wrapper,
+#user-register #edit-profile-org-wrapper,
+#user-register #edit-profile-job-title-wrapper,
+#user-register #edit-profile-interests-wrapper,
+#user-register #edit-picture-upload-register-wrapper {
+  float:left;
+  width:400px;
+  margin:10px 10px 10px 22px;
+}
+
+#user-register #edit-pass-wrapper {
+  margin:-30px 10px 10px 22px;
+}
+
+#user-register #edit-profile-interests-wrapper {
+  margin:-30px 10px 10px 22px;
+}
+
+#user-register #edit-profile-interests-wrapper .description {
+  width:400px;
+}
+
+#user-register  #edit-profile-interests {
+ resize:none;
+ width:400px;
+}
+
+#user-register #edit-submit {
+  width:200px;
+  margin:0;
+  font-size: 16px;
 }
 
 html.js input.form-autocomplete {
