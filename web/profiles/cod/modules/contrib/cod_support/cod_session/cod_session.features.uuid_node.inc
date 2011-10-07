@@ -12,7 +12,7 @@ function cod_session_uuid_features_default_content() {
   'uid' => '0',
   'status' => '1',
   'created' => '1295905543',
-  'changed' => '1317236467',
+  'changed' => '1317975274',
   'comment' => '0',
   'promote' => '0',
   'moderate' => '0',
@@ -32,7 +32,7 @@ Speakers reception
 Sessions
 Wrap party',
   'log' => '',
-  'revision_timestamp' => '1317236467',
+  'revision_timestamp' => '1317975274',
   'format' => '1',
   'name' => '',
   'picture' => '',

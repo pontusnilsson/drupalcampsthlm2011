@@ -20,7 +20,17 @@ function drupalse_rules_rules_defaults() {
         '#conditions' => array(),
         '#actions' => array(
           '0' => array(
-            '#type' => 'action',
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Page redirect',
+              'module' => 'System',
+              'eval input' => array(
+                '0' => 'path',
+                '1' => 'query',
+                '2' => 'fragment',
+              ),
+            ),
+            '#name' => 'rules_action_drupal_goto',
             '#settings' => array(
               'path' => 'ticket',
               'query' => '',
@@ -41,17 +51,30 @@ function drupalse_rules_rules_defaults() {
                 ),
               ),
             ),
-            '#name' => 'rules_action_drupal_goto',
+            '#type' => 'action',
+          ),
+          '1' => array(
+            '#weight' => 0,
             '#info' => array(
-              'label' => 'Page redirect',
+              'label' => 'Show a configurable message on the site',
               'module' => 'System',
               'eval input' => array(
-                '0' => 'path',
-                '1' => 'query',
-                '2' => 'fragment',
+                '0' => 'message',
               ),
             ),
-            '#weight' => 0,
+            '#name' => 'rules_action_drupal_message',
+            '#settings' => array(
+              'message' => 'Thanks for you registration. You are almost done, see below for information how to pay for your ticket.',
+              'error' => 0,
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'message' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+            '#type' => 'action',
           ),
         ),
         '#version' => 6003,

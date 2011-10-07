@@ -70,6 +70,19 @@ http://groups.drupal.org/node/178154',
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'drupalse_footer';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Footer';
+  $box->options = array(
+    'body' => 'Drupal is a <a href="http://drupal.com/trademark" target="_blank">registered trademark</a>of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a> | Visit the Swedish Drupal community at <a target="_blank" href="http://groups.drupal.org/sweden">groups.drupal.org/sweden</a> | <a href="/about-this-site">About this site</a>',
+    'format' => '1',
+  );
+  $export['drupalse_footer'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'drupalse_registerpromo';
   $box->plugin_key = 'simple';
   $box->title = 'Sign up';
@@ -92,6 +105,19 @@ http://groups.drupal.org/node/178154',
     'format' => '1',
   );
   $export['drupalse_sessionpromo'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'drupalse_sessions';
+  $box->plugin_key = 'simple';
+  $box->title = 'About sessions';
+  $box->description = 'About sessions';
+  $box->options = array(
+    'body' => 'These are proposed sessions. Our program commitee will choose which of the proposed sessions that get accepted.',
+    'format' => '1',
+  );
+  $export['drupalse_sessions'] = $box;
 
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
@@ -120,7 +146,7 @@ To complete your registration you need to go to <a href="http://www.biljett.com/
 
 When we have confirmed your payment this page will not be available for you anymore.
 
-Now that you are logged in you may <a href"#">create session proposals</a> or check out the already <a href="/sessions">proposed sessions</a>. 
+Now that you are logged in you may <a href="/node/add/session">create session proposals</a> or check out the already <a href="/sessions">proposed sessions</a>. 
 
 See you at DrupalCamp 12 november.',
     'format' => '1',
