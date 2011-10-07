@@ -97,7 +97,9 @@ body {
   line-height: 18px;
 }
 
-#navigation a:hover {
+#navigation a:hover,
+#navigation a.active,
+#navigation .active-trail a {
   color: #56A79E;
   text-decoration:none;
 }
