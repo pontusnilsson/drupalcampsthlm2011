@@ -144,6 +144,7 @@ body {
 
 .site-service .menu-name-secondary-links ul {
   margin:0;
+  padding:0;
 }
 
 .site-service .menu-name-secondary-links ul li {
@@ -151,14 +152,16 @@ body {
   list-style-image:none; 
   float:left;
   padding:0 10px;
+  margin:0;
 }
 
 .site-service .menu-name-secondary-links ul li a,
 .site-service .menu-name-secondary-links ul li a:link,
 .site-service .menu-name-secondary-links ul li a:visited{
   font-size:14px;
+  line-height:16px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#fff;  
+  color:#fff;
 }
 .site-service .menu-name-secondary-links ul li a:hover,
 .site-service .menu-name-secondary-links ul li a.active {
