@@ -46,6 +46,8 @@ h1 a, h2 a, h3 a {
  }
 
  ul {
-   list-style: disc inside none;
-   margin: 1em 0;
+    list-style: disc outside none;
+    margin: 1em 0;
+    padding-left: 1em;
 }
+
