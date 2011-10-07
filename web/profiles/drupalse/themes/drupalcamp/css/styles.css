@@ -60,8 +60,10 @@ body {
 }
 
 .site-footer .panel-pane {
-  padding:1em;
-  text-align: center;
+  padding:1em 2em;
+  opacity:0.8;
+  font-size:14px;
+  color: #666;
   background:#fff;
   margin-top:1em;
   -webkit-border-radius: 10px;
@@ -71,6 +73,9 @@ body {
 
 .site-footer .panel-pane p {
   margin:0;
+}
+.site-footer .panel-pane a {
+  color:#333;
 }
 
 .page-sidebar-left .panel-pane {
