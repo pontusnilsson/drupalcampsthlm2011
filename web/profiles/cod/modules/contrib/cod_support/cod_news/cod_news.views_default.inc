@@ -49,7 +49,7 @@ function cod_news_views_default_views() {
       'relationship' => 'none',
     ),
     'created' => array(
-      'label' => '',
+      'label' => 'Submitted',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',

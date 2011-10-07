@@ -14,7 +14,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'Swedish Drupal Awards 2011';
   $box->description = 'DrupalCamp Awards';
   $box->options = array(
-    'body' => '<p>Äntligen! Nu är det dags att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:</p><ul><li>Årets svenska webbplats</li><li>Årets svenska drupalist</li><li>Årets svenska design</li><li>Årets svenska teknik</li></ul><p>Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats?&nbsp;</p><p>Grundförutsättningar för att kunna nomineras är:</p><ul><li>Det ska ha med Drupal att göra</li><li>Det ska vara svenskt</li><li>Det ska varit aktuellt under året</li><li>Det ska inte ha vunnit tidigare</li></ul><p>Nomeneringsprocessen är öppen och sker här på DrupalCamps webb. Välkommen att nominera!</p>',
+    'body' => '<p><strong>The Swedish Drupal Awards are awarded in the categories of best Swedish Drupal website, Swedish drupalist of the year, Swedish Drupal design of the year and Swedish Drupal technology of year. Further details in Swedish below.</strong></p><p>Äntligen! Nu är det dags att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:</p><ul><li>Årets svenska webbplats</li><li>Årets svenska drupalist</li><li>Årets svenska design</li><li>Årets svenska teknik</li></ul><p>Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats?&nbsp;</p><p>Grundförutsättningar för att kunna nomineras är:</p><ul><li>Det ska ha med Drupal att göra</li><li>Det ska vara svenskt</li><li>Det ska varit aktuellt under året</li><li>Det ska inte ha vunnit tidigare</li></ul><p>Nomeneringsprocessen är öppen och sker här på DrupalCamps webb. Välkommen att nominera!</p>',
     'format' => '3',
   );
   $export['drupalse_awards'] = $box;
@@ -27,8 +27,8 @@ function drupalse_boxes_default_box() {
   $box->title = 'Vad händer sen?';
   $box->description = 'DrupalCamp Awards 2';
   $box->options = array(
-    'body' => '<p>En kommitté bestående av styrgruppen för DrupalCamp Stockholm 2011 utser sedan tävlingsbidrag inom varje kategori. Anledningen till att det är en modererad urvalsprocess är för att få en variation och bredd bland tävlingsbidragen samt att det kan bli för mycket att gå igenom för en besökare. Besökarnas röst är viktigare för att utse vinnarna.</p><p>Tävlingsbidragen kommer att presenteras på DrupalCamps webbplats innan DrupalCamp går av stapeln så besökarna får tid att titta igenom och fundera.</p><p>Tävlingen avgörs sedan genom röstning bland besökarna på DrupalCamp, så se till att komma dit och göra din röst hörd!</p><p>Läs mer om bakgrund och diskution om Swedish Drupal Awards 2001 på g.d.o.:&nbsp;http://groups.drupal.org/node/178154</p>',
-    'format' => '3',
+    'body' => '<p>En kommitté bestående av styrgruppen för DrupalCamp Stockholm 2011 utser sedan tävlingsbidrag inom varje kategori. Anledningen till att det är en modererad urvalsprocess är för att få en variation och bredd bland tävlingsbidragen samt att det kan bli för mycket att gå igenom för en besökare. Besökarnas röst är viktigare för att utse vinnarna.</p><p>Tävlingsbidragen kommer att presenteras på DrupalCamps webbplats innan DrupalCamp går av stapeln så besökarna får tid att titta igenom och fundera.</p><p>Tävlingen avgörs sedan genom röstning bland besökarna på DrupalCamp, så se till att komma dit och göra din röst hörd!</p><p>Läs mer om bakgrund och diskution om Swedish Drupal Awards 2001 på <a href="http://groups.drupal.org/node/178154">g.d.o.</a></p>',
+    'format' => '2',
   );
   $export['drupalse_awards2'] = $box;
 
@@ -40,7 +40,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'Forgotten to buy a ticket?';
   $box->description = 'Buy ticket promo';
   $box->options = array(
-    'body' => '<p>Have you purchased your ticket at <a href="http://www.biljett.com/drupalcampstockholm2011">biljett.com</a>? A ticket is required to attend DrupalCamp Stockholm. This reminder will keep nagging you about buying one until you do!</p><p>It could also be that we not yet have confirmed your purchase. If this block doesn\'t disappear within 3 days, please <a href="/contact">contact us</a>.</p>',
+    'body' => '<p>Have you purchased your ticket at <a href="http://www.biljett.com/drupalcampstockholm2011">biljett.com</a>? A ticket is required to attend DrupalCamp Stockholm. This reminder will keep nagging you about buying one until you do!</p><p>It could also be that we have not yet confirmed your purchase. If this block doesn\'t disappear within 3 days, please <a href="/contact">contact us</a>.</p>',
     'format' => '3',
   );
   $export['drupalse_buyticket'] = $box;
@@ -57,6 +57,19 @@ function drupalse_boxes_default_box() {
     'format' => '1',
   );
   $export['drupalse_footer'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'drupalse_nominate';
+  $box->plugin_key = 'simple';
+  $box->title = 'Nominate your site';
+  $box->description = 'Awards promo';
+  $box->options = array(
+    'body' => 'Don\'t miss out the Swedish Drupal Awards 2011. Leave your nomination submission <a href="/drupal-awards">here</a>.',
+    'format' => '2',
+  );
+  $export['drupalse_nominate'] = $box;
 
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
@@ -92,7 +105,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'About sessions';
   $box->description = 'About sessions';
   $box->options = array(
-    'body' => 'These are proposed sessions. Our program commitee will choose which of the proposed sessions that get accepted.',
+    'body' => 'These sessions have been proposed. Session proposals are accepted until November 1st. At which point our program commitee will choose which of the proposed sessions that get included in the schedule.',
     'format' => '1',
   );
   $export['drupalse_sessions'] = $box;

@@ -55,10 +55,10 @@ function drupalse_social_strongarm() {
   $strongarm->name = 'addthis_node_types';
   $strongarm->value = array(
     'news' => 'news',
+    'page' => 'page',
     'session' => 'session',
     'event' => 0,
     'drupalse_nomination' => 0,
-    'page' => 0,
     'product' => 0,
     'room' => 0,
     'schedule_item' => 0,
