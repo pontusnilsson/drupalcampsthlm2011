@@ -305,23 +305,6 @@ div.tweets-pulled-listing ul {
   height:80px;
 }
 
-
-.sponsor-page td.col-1 {
-
-}
-
-.view-Sponsors td.col-2 {
-
-}
-
-.view-Sponsors.view-display-id-block_2 .view-Sponsors td.col-1 {
-
-}
-
-.view-Sponsors.view-display-id-block_2 td.col-2 {
-
-}
-
 /**
  * Table design
 */
@@ -365,8 +348,9 @@ div.tweets-pulled-listing ul {
   vertical-align: middle;
 }
 
-/************** USER REGISTER FORM *********/
-
+/**
+ * User registration page
+ */
 fieldset {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -596,7 +580,6 @@ thead th {
 /**
  * Menu blocks
  */
-
  .pane-menu-block-1 ul,
  .pane-menu-block-2 ul {
    margin-left:0;
@@ -619,7 +602,9 @@ thead th {
   padding-left:0;
 }
 
-
+/**
+ * Override register promo TODO move chnuk
+ */
 #boxes-box-drupalse_registerpromo a.register,
 #boxes-box-drupalse_registerpromo a.register:link,
 #boxes-box-drupalse_registerpromo a.register:visited {
@@ -638,4 +623,12 @@ thead th {
 #boxes-box-drupalse_registerpromo a.register:hover {
   background-color:#9b9798;
   border-color: #9b9798;
+}
+
+
+/**
+ * Fix for table on community that is to wide
+ */
+.view-attendees .views-field-name {
+  max-width:120px;
 }

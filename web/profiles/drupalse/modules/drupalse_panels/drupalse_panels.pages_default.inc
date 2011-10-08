@@ -880,7 +880,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Spread the word about DrupalCamp',
+      'override_title_text' => 'Spread the word about Swedish Drupal Awards 2011',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1211,26 +1211,6 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
-    $pane->subtype = 'addthis-0';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Spread the word about DrupalCamp',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-4';
-    $pane = new stdClass;
-    $pane->pid = 'new-5';
-    $pane->panel = 'sidebar_left';
-    $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_registerpromo';
     $pane->shown = TRUE;
     $pane->access = array(
@@ -1257,11 +1237,51 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'addthis-0';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Spread the word about DrupalCamp',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 1;
     $display->content['new-5'] = $pane;
     $display->panels['sidebar_left'][1] = 'new-5';
     $pane = new stdClass;
     $pane->pid = 'new-6';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'dcse_biljett_count-0';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Tickets left',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-6';
+    $pane = new stdClass;
+    $pane->pid = 'new-7';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_buyticket';
@@ -1300,11 +1320,11 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-6'] = $pane;
-    $display->panels['sidebar_left'][2] = 'new-6';
+    $pane->position = 3;
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-7';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'user-0';
@@ -1320,11 +1340,11 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
-    $display->content['new-7'] = $pane;
-    $display->panels['sidebar_left'][3] = 'new-7';
+    $pane->position = 4;
+    $display->content['new-8'] = $pane;
+    $display->panels['sidebar_left'][4] = 'new-8';
     $pane = new stdClass;
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'sidebar_left';
     $pane->type = 'drupalse_twitter_content_type';
     $pane->subtype = 'drupalse_twitter_content_type';
@@ -1347,9 +1367,9 @@ function drupalse_panels_default_page_manager_pages() {
       'css_class' => 'twitter-pane',
     );
     $pane->extras = array();
-    $pane->position = 4;
-    $display->content['new-8'] = $pane;
-    $display->panels['sidebar_left'][4] = 'new-8';
+    $pane->position = 5;
+    $display->content['new-9'] = $pane;
+    $display->panels['sidebar_left'][5] = 'new-9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1701,7 +1721,7 @@ function drupalse_panels_default_page_manager_pages() {
       'url' => '',
       'display' => 'block_8',
       'override_title' => 1,
-      'override_title_text' => 'Organizing sponsors',
+      'override_title_text' => 'Organizing',
     );
     $pane->cache = array();
     $pane->style = array(

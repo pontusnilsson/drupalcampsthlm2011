@@ -12,28 +12,20 @@ function cod_session_uuid_features_default_content() {
   'uid' => '0',
   'status' => '1',
   'created' => '1295905543',
-  'changed' => '1317975274',
+  'changed' => '1318011975',
   'comment' => '0',
   'promote' => '0',
   'moderate' => '0',
   'sticky' => '0',
   'tnid' => '0',
   'translate' => '0',
-  'revision_uid' => '1',
+  'revision_uid' => '5',
   'title' => 'Program',
-  'body' => 'Day One - Nov 12, 2011
-Breakfast and registration
-Speakers reception
-Sessions
-Wrap party',
-  'teaser' => 'Day One - Nov 12, 2011
-Breakfast and registration
-Speakers reception
-Sessions
-Wrap party',
+  'body' => '<h3>Preliminary conference program</h3><p><em>Please note that this program is preliminary and subject to change!</em></p><p>09.00 - 10.00 Breakfast and registration</p><p>10.00 - 12.00 Sessions</p><p>12.00 - 13.00 Lunch</p><p>13.00 - 15.00 Sessions</p><p>15.00 - 15.30 Coffee Break</p><p>15.30 - 16.30 Sessions</p><p>16.30 - 17.00 Swedish Drupal Awards</p><p>17.00 - 23.00 Evening activities</p>',
+  'teaser' => '<h3>Preliminary conference program</h3><p><em>Please note that this program is preliminary and subject to change!</em></p><p>09.00 - 10.00 Breakfast and registration</p><p>10.00 - 12.00 Sessions</p><p>12.00 - 13.00 Lunch</p><p>13.00 - 15.00 Sessions</p><p>15.00 - 15.30 Coffee Break</p><p>15.30 - 16.30 Sessions</p><p>16.30 - 17.00 Swedish Drupal Awards</p><p>17.00 - 23.00 Evening activities</p>',
   'log' => '',
-  'revision_timestamp' => '1317975274',
-  'format' => '1',
+  'revision_timestamp' => '1318011975',
+  'format' => '3',
   'name' => '',
   'picture' => '',
   'data' => NULL,

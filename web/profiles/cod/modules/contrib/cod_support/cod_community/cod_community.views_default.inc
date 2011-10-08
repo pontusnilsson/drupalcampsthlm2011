@@ -308,7 +308,7 @@ function cod_community_views_default_views() {
         'separator' => '',
       ),
       'value_4' => array(
-        'sortable' => 1,
+        'sortable' => 0,
         'separator' => ' ',
       ),
       'value_5' => array(
@@ -316,11 +316,11 @@ function cod_community_views_default_views() {
         'separator' => '',
       ),
       'value_1' => array(
-        'sortable' => 1,
+        'sortable' => 0,
         'separator' => '',
       ),
       'value_3' => array(
-        'sortable' => 1,
+        'sortable' => 0,
         'separator' => '',
       ),
       'value' => array(
@@ -532,7 +532,7 @@ function cod_community_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_user' => 0,
+      'link_to_user' => 1,
       'overwrite_anonymous' => 0,
       'anonymous_text' => '',
       'exclude' => 0,
@@ -607,14 +607,14 @@ function cod_community_views_default_views() {
       'field' => 'value',
       'relationship' => 'none',
       'override' => array(
-        'button' => 'Override',
+        'button' => 'Use default',
       ),
     ),
     'value_1' => array(
       'label' => 'Job title',
       'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
+        'alter_text' => 1,
+        'text' => '[value_1],',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
@@ -631,10 +631,10 @@ function cod_community_views_default_views() {
         'strip_tags' => 0,
       ),
       'empty' => '',
-      'hide_empty' => 0,
+      'hide_empty' => 1,
       'empty_zero' => 0,
-      'link_to_user' => 1,
-      'exclude' => 0,
+      'link_to_user' => 0,
+      'exclude' => 1,
       'id' => 'value_1',
       'table' => 'profile_values_profile_job_title',
       'field' => 'value',
@@ -644,10 +644,10 @@ function cod_community_views_default_views() {
       ),
     ),
     'value_3' => array(
-      'label' => 'Organization',
+      'label' => 'Jobtitle, Organization',
       'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
+        'alter_text' => 1,
+        'text' => '[value_1] [value_3]',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
@@ -672,6 +672,9 @@ function cod_community_views_default_views() {
       'table' => 'profile_values_profile_org',
       'field' => 'value',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
     ),
     'value' => array(
       'label' => 'Interests',

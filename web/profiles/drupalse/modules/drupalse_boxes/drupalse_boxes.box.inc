@@ -105,7 +105,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'About sessions';
   $box->description = 'About sessions';
   $box->options = array(
-    'body' => 'These sessions have been proposed. Session proposals are accepted until November 1st. At which point our program commitee will choose which of the proposed sessions that get included in the schedule.',
+    'body' => 'These sessions have been proposed. Session proposals are accepted until November 1st, at which point our program commitee will choose which of the proposed sessions get included in the schedule.',
     'format' => '1',
   );
   $export['drupalse_sessions'] = $box;
