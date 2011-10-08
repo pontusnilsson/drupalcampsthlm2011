@@ -34,9 +34,12 @@ function dcse_biljett_count_block($op = 'list', $delta = 0, $edit = array()) {
  * TODO: Lots of hard-coded stuff here, should be generalized
  */
 function _dcse_biljett_count_block_view() {
-  if ($cache = cache_get('dcse_biljett_count:count')) {
+  // The cache only clears on cron run, which doesn't happen that frequently, so cache_get() may return entries that
+  // have expired. Why we need to check expire time manually to prevent using stale data.
+  if (($cache = cache_get('dcse_biljett_count:count')) && !empty($cache->data) && (time() < $cache->expire)) {
     return $cache->data;
   }
+  
   else {
     $qp = htmlqp('http://www.biljett.com/drupalcampstockholm2011');
     
@@ -45,6 +48,6 @@ function _dcse_biljett_count_block_view() {
     
     // We cache the result for ten minutes, before it expires, to avoid unnecessary requests to biljett.com
     cache_set('dcse_biljett_count:count', $result[0], 'cache', strtotime('+10 minutes'));
-    return $result[0];    
+    return $result[0];
   }
 }
