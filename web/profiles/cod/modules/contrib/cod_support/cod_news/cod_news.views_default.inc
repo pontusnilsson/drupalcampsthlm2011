@@ -349,6 +349,40 @@ function cod_news_views_default_views() {
   $handler->override_option('argument_input', array());
   $handler->override_option('link_to_view', 0);
   $handler->override_option('inherit_panels_path', 0);
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->override_option('style_plugin', 'rss');
+  $handler->override_option('style_options', array(
+    'mission_description' => FALSE,
+    'description' => '',
+  ));
+  $handler->override_option('row_plugin', 'node_rss');
+  $handler->override_option('row_options', array(
+    'relationship' => 'none',
+    'item_length' => 'default',
+  ));
+  $handler->override_option('path', 'feeds/news.xml');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('displays', array(
+    'panel_pane_1' => 'panel_pane_1',
+    'default' => 0,
+    'page_1' => 0,
+    'block_1' => 0,
+    'block_2' => 0,
+  ));
+  $handler->override_option('sitename_title', FALSE);
 
   $views[$view->name] = $view;
 

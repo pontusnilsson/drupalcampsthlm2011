@@ -77,8 +77,7 @@ function cod_base_user_default_permissions() {
   $permissions['view own orders'] = array(
     'name' => 'view own orders',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'site administrator',
+      '0' => 'site administrator',
     ),
   );
 

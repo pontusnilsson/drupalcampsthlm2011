@@ -13,6 +13,10 @@ function cod_news_content_default_fields() {
     'display_settings' => array(
       'weight' => '-3',
       'parent' => '',
+      '4' => array(
+        'format' => 'image_plain',
+        'exclude' => 1,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -22,10 +26,6 @@ function cod_news_content_default_fields() {
       ),
       'full' => array(
         'format' => 'drupalse_pagecontent_default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'image_plain',
         'exclude' => 0,
       ),
       '2' => array(
