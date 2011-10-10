@@ -23,4 +23,10 @@ function drupalse_custom_form_alter(&$form, &$form_state, $form_id) {
 function drupalse_custom_message_alter(&$messages) {
   $matches = $messages->contains('A confirmation email will be sent shortly');
   $messages->remove($matches);
+
+  $matches = $messages->contains('The image was resized to fit within');
+  $messages->remove($matches);
+
+  $matches = $messages->contains('Signup to');
+  $messages->remove($matches);
 }
