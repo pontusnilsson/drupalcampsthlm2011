@@ -4,3 +4,4 @@ core = 6.x
 dependencies[] = "reg_with_pic"
 dependencies[] = "messages_alter"
 dependencies[] = "mollom"
+dependencies[] = "drupalse_views"

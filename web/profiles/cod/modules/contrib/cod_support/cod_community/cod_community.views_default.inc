@@ -6,6 +6,539 @@
 function cod_community_views_default_views() {
   $views = array();
 
+  // Exported view: attendee_administration
+  $view = new view;
+  $view->name = 'attendee_administration';
+  $view->description = 'Admin view of users that have signed up and are attendees';
+  $view->tag = '';
+  $view->view_php = '';
+  $view->base_table = 'users';
+  $view->is_cacheable = FALSE;
+  $view->api_version = 2;
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('relationships', array(
+    'uid' => array(
+      'label' => 'Signup user',
+      'required' => 1,
+      'id' => 'uid',
+      'table' => 'signup_log',
+      'field' => 'uid',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+  ));
+  $handler->override_option('fields', array(
+    'picture' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'imagecache_preset' => 'drupalse_profile',
+      'exclude' => 0,
+      'id' => 'picture',
+      'table' => 'users',
+      'field' => 'picture',
+      'relationship' => 'none',
+    ),
+    'name' => array(
+      'label' => 'Name',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_user' => 0,
+      'overwrite_anonymous' => 0,
+      'anonymous_text' => '',
+      'exclude' => 1,
+      'id' => 'name',
+      'table' => 'users',
+      'field' => 'name',
+      'relationship' => 'none',
+    ),
+    'value_4' => array(
+      'label' => 'First Name',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_user' => 0,
+      'exclude' => 0,
+      'id' => 'value_4',
+      'table' => 'profile_values_profile_first',
+      'field' => 'value',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'value_5' => array(
+      'label' => 'Last name',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '[value_4] [value_5]',
+        'make_link' => 0,
+        'path' => 'users/[name]',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_user' => 1,
+      'exclude' => 0,
+      'id' => 'value_5',
+      'table' => 'profile_values_profile_last',
+      'field' => 'value',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'value_1' => array(
+      'label' => 'Job title',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_user' => 1,
+      'exclude' => 0,
+      'id' => 'value_1',
+      'table' => 'profile_values_profile_job_title',
+      'field' => 'value',
+      'relationship' => 'none',
+    ),
+    'value_3' => array(
+      'label' => 'Organization',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_user' => 0,
+      'exclude' => 0,
+      'id' => 'value_3',
+      'table' => 'profile_values_profile_org',
+      'field' => 'value',
+      'relationship' => 'none',
+    ),
+    'value' => array(
+      'label' => 'Interests',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'type' => 'separator',
+      'separator' => ', ',
+      'exclude' => 0,
+      'id' => 'value',
+      'table' => 'profile_values_profile_interests',
+      'field' => 'value',
+      'relationship' => 'none',
+    ),
+    'rid' => array(
+      'label' => 'Roles',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'type' => 'separator',
+      'separator' => ', ',
+      'exclude' => 0,
+      'id' => 'rid',
+      'table' => 'users_roles',
+      'field' => 'rid',
+      'relationship' => 'uid',
+    ),
+    'edit_node' => array(
+      'label' => 'Edit link',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => '',
+      'exclude' => 0,
+      'id' => 'edit_node',
+      'table' => 'users',
+      'field' => 'edit_node',
+      'relationship' => 'uid',
+    ),
+    'rid_1' => array(
+      'label' => 'Roles',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'type' => 'separator',
+      'separator' => ', ',
+      'exclude' => 0,
+      'id' => 'rid_1',
+      'table' => 'users_roles',
+      'field' => 'rid',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'uid' => array(
+      'operator' => 'not in',
+      'value' => array(
+        '0' => 0,
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'uid',
+      'table' => 'users',
+      'field' => 'uid',
+      'relationship' => 'uid',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'role',
+    'role' => array(
+      '4' => 4,
+    ),
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('title', 'Community');
+  $handler->override_option('css_class', 'drupalcamp-table');
+  $handler->override_option('header', 'This is a list of everyone attending DrupalCamp Stockholm.');
+  $handler->override_option('header_format', '1');
+  $handler->override_option('header_empty', 0);
+  $handler->override_option('empty', 'No one has signed up for this event. Attendees will appear as they sign up.');
+  $handler->override_option('empty_format', '1');
+  $handler->override_option('items_per_page', 0);
+  $handler->override_option('style_plugin', 'bulk');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'override' => 1,
+    'sticky' => 0,
+    'order' => 'asc',
+    'columns' => array(
+      'picture' => 'picture',
+      'name' => 'name',
+      'value_4' => 'value_4',
+      'value_5' => 'value_5',
+      'value_1' => 'value_1',
+      'value_3' => 'value_3',
+      'value' => 'value',
+      'rid' => 'rid',
+      'edit_node' => 'edit_node',
+      'rid_1' => 'rid_1',
+    ),
+    'info' => array(
+      'picture' => array(
+        'sortable' => 0,
+        'separator' => '',
+      ),
+      'name' => array(
+        'sortable' => 0,
+        'separator' => '',
+      ),
+      'value_4' => array(
+        'sortable' => 1,
+        'separator' => '',
+      ),
+      'value_5' => array(
+        'sortable' => 1,
+        'separator' => '',
+      ),
+      'value_1' => array(
+        'sortable' => 0,
+        'separator' => '',
+      ),
+      'value_3' => array(
+        'sortable' => 1,
+        'separator' => '',
+      ),
+      'value' => array(
+        'separator' => '',
+      ),
+      'rid' => array(
+        'separator' => '',
+      ),
+      'edit_node' => array(
+        'separator' => '',
+      ),
+      'rid_1' => array(
+        'separator' => '',
+      ),
+    ),
+    'default' => 'value_4',
+    'execution_type' => '1',
+    'max_performance' => 0,
+    'display_type' => '0',
+    'hide_selector' => 0,
+    'preserve_selection' => 1,
+    'display_result' => 1,
+    'merge_single_action' => 1,
+    'operations' => array(
+      'user_block_ip_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'user_block_user_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'user_user_operations_block' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'views_bulk_operations_delete_user_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'system_message_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'views_bulk_operations_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'views_bulk_operations_script_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'views_bulk_operations_profile_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'views_bulk_operations_user_roles_action' => array(
+        'selected' => 1,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'views_bulk_operations_argument_selector_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'system_goto_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'system_send_email_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'views_send_mail_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'user_user_operations_unblock' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+      'pathauto_user_update_alias_multiple-620e193b20ba9caa374fea9ca0ad38f0' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'label' => '',
+      ),
+    ),
+  ));
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->override_option('path', 'admin/users/attendees');
+  $handler->override_option('menu', array(
+    'type' => 'normal',
+    'title' => 'Attendee Administration',
+    'description' => '',
+    'weight' => '0',
+    'name' => 'menu-conference-admin',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+
+  $views[$view->name] = $view;
+
   // Exported view: attendees
   $view = new view;
   $view->name = 'attendees';
@@ -282,7 +815,7 @@ function cod_community_views_default_views() {
   $handler->override_option('header_empty', 0);
   $handler->override_option('empty', 'No one has signed up for this event. Attendees will appear as they sign up.');
   $handler->override_option('empty_format', '1');
-  $handler->override_option('items_per_page', 100);
+  $handler->override_option('items_per_page', 0);
   $handler->override_option('style_plugin', 'table');
   $handler->override_option('style_options', array(
     'grouping' => '',
