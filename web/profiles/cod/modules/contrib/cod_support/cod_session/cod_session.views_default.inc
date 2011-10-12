@@ -323,6 +323,7 @@ function cod_session_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'Schedule (Access Restricted)');
+  $handler->override_option('css_class', 'drupalcamp-table');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 0);
   $handler->override_option('empty', 'The schedule is empty. Please create one or more rooms and time slots, and assign a session or schedule item to them. For help with scheduling, please see the <a href="http://drupal.org/documentation/build/cod/">COD Documentation</a>.');
