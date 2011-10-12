@@ -631,6 +631,7 @@ thead th {
  */
 .view-attendees .views-field-name {
   max-width:120px;
+  word-wrap: break-word;
 }
 
 /**
