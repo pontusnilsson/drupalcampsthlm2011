@@ -1134,7 +1134,7 @@ function cod_community_views_default_views() {
       'hide_empty' => 0,
       'empty_zero' => 0,
       'link_to_user' => 1,
-      'exclude' => 0,
+      'exclude' => 1,
       'id' => 'value_5',
       'table' => 'profile_values_profile_last',
       'field' => 'value',
