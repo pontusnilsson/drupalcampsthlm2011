@@ -1456,7 +1456,7 @@ function drupalse_panels_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass;
     $pane->pid = 'new-1';
-    $pane->panel = 'content';
+    $pane->panel = 'highlighted';
     $pane->type = 'views_panes';
     $pane->subtype = 'cod_schedule-panel_pane_1';
     $pane->shown = TRUE;
@@ -1470,7 +1470,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-1'] = $pane;
-    $display->panels['content'][0] = 'new-1';
+    $display->panels['highlighted'][0] = 'new-1';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;

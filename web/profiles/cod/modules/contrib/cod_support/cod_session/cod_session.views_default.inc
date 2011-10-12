@@ -752,8 +752,8 @@ function cod_session_views_default_views() {
     'title' => array(
       'label' => 'Name',
       'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
+        'alter_text' => 1,
+        'text' => '<h3>[title]</h3>',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
@@ -818,7 +818,7 @@ function cod_session_views_default_views() {
       'label' => 'Speaker(s)',
       'alter' => array(
         'alter_text' => 1,
-        'text' => 'Speaker(s): [field_speakers_uid]',
+        'text' => 'Session by: [field_speakers_uid]',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
