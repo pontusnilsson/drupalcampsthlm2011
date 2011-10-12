@@ -14,7 +14,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'Swedish Drupal Awards 2011';
   $box->description = 'DrupalCamp Awards';
   $box->options = array(
-    'body' => '<p><strong>The Swedish Drupal Awards are awarded in the categories of best Swedish Drupal website, Swedish drupalist of the year, Swedish Drupal design of the year and Swedish Drupal technology of year. Further details in Swedish below.</strong></p><p>Äntligen! Nu är det dags att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:</p><ul><li>Årets svenska webbplats</li><li>Årets svenska drupalist</li><li>Årets svenska design</li><li>Årets svenska teknik</li></ul><p>Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats?&nbsp;</p><p>Grundförutsättningar för att kunna nomineras är:</p><ul><li>Det ska ha med Drupal att göra</li><li>Det ska vara svenskt</li><li>Det ska varit aktuellt under året</li><li>Det ska inte ha vunnit tidigare</li></ul><p>Nomeneringsprocessen är öppen och sker här på DrupalCamps webb. Välkommen att nominera!</p>',
+    'body' => '<p><img style="float: right; margin-left: 1em; margin-bottom: 1em;" src="/profiles/drupalse/themes/drupalcamp/images/drupalawards-logo.png" alt="" width="260px" height="260px" /><strong>The Swedish Drupal Awards are awarded in the categories of best Swedish Drupal website, Swedish drupalist of the year, Swedish Drupal design of the year and Swedish Drupal technology of year. Further details in Swedish below.</strong></p><p>Äntligen! Nu är det dags att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:</p><ul><li>Årets svenska webbplats</li><li>Årets svenska drupalist</li><li>Årets svenska design</li><li>Årets svenska teknik</li></ul><p>Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats?&nbsp;</p><p>Grundförutsättningar för att kunna nomineras är:</p><ul><li>Det ska ha med Drupal att göra</li><li>Det ska vara svenskt</li><li>Det ska varit aktuellt under året</li><li>Det ska inte ha vunnit tidigare</li></ul><p>Nomeneringsprocessen är öppen och sker här på DrupalCamps webb. Välkommen att nominera!</p>',
     'format' => '3',
   );
   $export['drupalse_awards'] = $box;
@@ -92,7 +92,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'Want to talk at DrupalCamp Stockholm?';
   $box->description = 'Session proposal promo';
   $box->options = array(
-    'body' => 'You can leave a session proposal <a href="/node/add/session">here</a>.',
+    'body' => 'Anyone attending the conference may <a href="/node/add/session">submit a session</a>, and if it\'s included in the schedule present it.',
     'format' => '2',
   );
   $export['drupalse_sessionpromo'] = $box;
@@ -105,8 +105,10 @@ function drupalse_boxes_default_box() {
   $box->title = 'About sessions';
   $box->description = 'About sessions';
   $box->options = array(
-    'body' => 'These sessions have been proposed. Session proposals are accepted until November 1st, at which point our program commitee will choose which of the proposed sessions get included in the schedule.',
-    'format' => '1',
+    'body' => 'These sessions have been proposed. Session proposals are accepted until November 1st, at which point our program commitee will choose which of the proposed sessions get included in the schedule.
+
+<p><a href="/node/add/session" class="register">Submit your session</a></p>',
+    'format' => '2',
   );
   $export['drupalse_sessions'] = $box;
 
@@ -131,7 +133,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'Complete your registration';
   $box->description = 'DrupalCamp Ticket';
   $box->options = array(
-    'body' => '<p><strong>Thanks for your registration. You are almost done.</strong></p><h2>How to pay</h2><ul><li>To complete your registration you need to go to <a href="http://www.biljett.com/drupalcampstockholm2011">www.biljett.com</a>&nbsp;and purchase a ticket.</li><li>IMPORTANT: Use the <strong>same first name and last name</strong> when you register on biljett.com as you entered when registering your account here.</li><li>Once we have confirmed your payment you will no longer see this notice.</li></ul><h3>Creating sessions and voting</h3><p>Now that you are logged in you may <a href="/node/add/session">create session proposals</a> or check out the already <a href="/sessions">proposed sessions</a>.</p><p><em>See you at DrupalCamp on November 12!</em></p>',
+    'body' => '<p><strong>Thanks for your registration. You are almost done.</strong></p><h2>How to pay</h2><ul><li>To complete your registration you need to go to <a href="http://www.biljett.com/drupalcampstockholm2011">www.biljett.com</a>&nbsp;and purchase a ticket.</li><li>IMPORTANT: Use the <strong>same first name and last name</strong> when you register on biljett.com as you entered when registering your account here.</li><li>Once we have confirmed your payment you will no longer see this notice.</li></ul><h3>Creating sessions and voting</h3><p>Now that you are logged in you may <a href="/node/add/session">create session proposals</a> or check out the already <a href="/sessions">proposed sessions</a>.</p><p>Session voting will be open around November 1.</p><p><em>See you at DrupalCamp on November 12!</em></p>',
     'format' => '3',
   );
   $export['drupalse_ticket'] = $box;
