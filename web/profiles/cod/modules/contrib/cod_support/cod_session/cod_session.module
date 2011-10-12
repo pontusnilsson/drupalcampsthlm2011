@@ -1010,8 +1010,8 @@ function cod_session_time_slot_format($slot) {
     date_timezone_set($date_start, timezone_open($slot->field_slot_datetime[0]['timezone']));
     date_timezone_set($date_end, timezone_open($slot->field_slot_datetime[0]['timezone']));
     $day = date_format_date($date_start, 'custom', 'F j');
-    $start = date_format_date($date_start, 'custom', 'g:iA');
-    $end = date_format_date($date_end, 'custom', 'g:iA');
+    $start = date_format_date($date_start, 'custom', 'H:i');
+    $end = date_format_date($date_end, 'custom', 'H:i');
     $ranges[$slot->nid] = array('day' => $day, 'formatted_start' => $start, 'formatted_end' => $end, 'date_start' => $date_start, 'date_end' => $date_end);
   }
   return $ranges[$slot->nid];
