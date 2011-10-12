@@ -356,7 +356,19 @@ fieldset {
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin:10px 0;
-  background-color: #DDDDDD;
+  background-color: #EEE;
+  padding: 10px;
+}
+html.js fieldset.collapsed { /* Overriding core. */
+  margin: 10px 0;
+}
+fieldset legend {
+  font-weight:bold;
+  background-color: #EEE;
+  padding: 2px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
 /**
@@ -398,6 +410,10 @@ input.form-submit:hover {
   width:400px;
 }
 
+#user-register fieldset {
+  padding: 0;
+}
+
 #user-register label,
 #user-register fieldset legend {
   color:'#323232';
@@ -407,8 +423,7 @@ input.form-submit:hover {
 }
 
 #user-register fieldset legend {
-  font-weight:bold;
-  padding: 0 0 5px 10px;
+  padding: 2px 10px;
 }
 
 #user-register .description {
@@ -428,15 +443,15 @@ input.form-submit:hover {
 #user-register #edit-picture-upload-register-wrapper {
   float:left;
   width:400px;
-  margin:10px 10px 10px 22px;
+  margin:10px 10px 10px 20px;
 }
 
 #user-register #edit-pass-wrapper {
-  margin:-30px 10px 10px 22px;
+  margin:-30px 10px 10px 20px;
 }
 
 #user-register #edit-profile-interests-wrapper {
-  margin:-30px 10px 10px 22px;
+  margin:-30px 10px 10px 20px;
 }
 
 #user-register #edit-profile-interests-wrapper .description {
