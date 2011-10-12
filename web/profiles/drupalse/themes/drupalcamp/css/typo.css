@@ -18,7 +18,8 @@ h1 {
 }
 
 h2 {
-  font-size: 20px bold;
+  font-size: 20px;
+  font-weight: bold;
   line-height: 1.3em;
   margin: 8px 0;
   color:#323232;
