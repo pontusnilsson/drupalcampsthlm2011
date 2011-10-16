@@ -14,8 +14,17 @@ function drupalse_boxes_default_box() {
   $box->title = 'Swedish Drupal Awards 2011';
   $box->description = 'DrupalCamp Awards';
   $box->options = array(
-    'body' => '<p><img style="float: right; margin-left: 1em; margin-bottom: 1em;" src="/profiles/drupalse/themes/drupalcamp/images/drupalawards-logo.png" alt="" width="260px" height="260px" /><strong>The Swedish Drupal Awards are awarded in the categories of best Swedish Drupal website, Swedish drupalist of the year, Swedish Drupal design of the year and Swedish Drupal technology of year. Further details in Swedish below.</strong></p><p>Äntligen! Nu är det dags att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:</p><ul><li>Årets svenska webbplats</li><li>Årets svenska drupalist</li><li>Årets svenska design</li><li>Årets svenska teknik</li></ul><p>Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats?&nbsp;</p><p>Grundförutsättningar för att kunna nomineras är:</p><ul><li>Det ska ha med Drupal att göra</li><li>Det ska vara svenskt</li><li>Det ska varit aktuellt under året</li><li>Det ska inte ha vunnit tidigare</li></ul><p>Nomeneringsprocessen är öppen och sker här på DrupalCamps webb. Välkommen att nominera!</p>',
-    'format' => '3',
+    'body' => '<p><strong>The Swedish Drupal Awards are awarded in the categories of best Swedish Drupal website, Swedish drupalist of the year, Swedish Drupal design of the year and Swedish Drupal technology of year. Further details in Swedish below.</strong></p>
+<p>
+<table style="text-align:center">
+<td><img src="/profiles/drupalse/themes/drupalcamp/images/drupal-awards-site.png" alt="Årets svenska webbplats"><br /><strong>Årets svenska webbplats</strong></td>
+<td><img src="/profiles/drupalse/themes/drupalcamp/images/drupal-awards-drupalist.png" alt="Årets svenska drupalist"><br /><strong>Årets svenska drupalist</strong></td>
+<td><img src="/profiles/drupalse/themes/drupalcamp/images/drupal-awards-design.png" alt="Årets svenska design"><br /><strong>Årets svenska design</strong></td>
+<td><img src="/profiles/drupalse/themes/drupalcamp/images/drupal-awards-tech.png" alt="Årets svenska teknik"><br /><strong>Årets svenska teknik</strong></td>
+</table>
+</p>
+<p>Äntligen! Nu är det dags att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:</p><ul><li>Årets svenska webbplats</li><li>Årets svenska drupalist</li><li>Årets svenska design</li><li>Årets svenska teknik</li></ul><p>Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats?&nbsp;</p><p>Grundförutsättningar för att kunna nomineras är:</p><ul><li>Det ska ha med Drupal att göra</li><li>Det ska vara svenskt</li><li>Det ska varit aktuellt under året</li><li>Det ska inte ha vunnit tidigare</li></ul><p>Nomeneringsprocessen är öppen och sker här på DrupalCamps webb. Välkommen att nominera!</p>',
+    'format' => '2',
   );
   $export['drupalse_awards'] = $box;
 
