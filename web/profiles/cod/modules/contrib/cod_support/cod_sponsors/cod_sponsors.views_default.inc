@@ -153,7 +153,7 @@ function cod_sponsors_views_default_views() {
   ));
   $handler = $view->new_display('block', 'Gold Sponsor Block', 'block_1');
   $handler->override_option('fields', array(
-    'field_logo_fid' => array(
+    'field_url_url' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -176,9 +176,50 @@ function cod_sponsors_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_node' => 1,
+      'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'drupalse_gold_linked',
+      'format' => 'plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'field_url_url',
+      'table' => 'node_data_field_url',
+      'field' => 'field_url_url',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_logo_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 1,
+        'path' => '[field_url_url]',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '_blank',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'drupalse_gold_default',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -266,7 +307,7 @@ function cod_sponsors_views_default_views() {
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('block', 'Silver Sponsor Block', 'block_2');
   $handler->override_option('fields', array(
-    'field_logo_fid' => array(
+    'field_url_url' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -289,9 +330,50 @@ function cod_sponsors_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_node' => 1,
+      'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'drupalse_silver_linked',
+      'format' => 'plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'field_url_url',
+      'table' => 'node_data_field_url',
+      'field' => 'field_url_url',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_logo_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 1,
+        'path' => '[field_url_url]',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '_blank',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'drupalse_silver_default',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -819,7 +901,7 @@ function cod_sponsors_views_default_views() {
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('block', 'Organizing sponsor Block', 'block_8');
   $handler->override_option('fields', array(
-    'field_logo_fid' => array(
+    'field_url_url' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -842,9 +924,50 @@ function cod_sponsors_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_node' => 1,
+      'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'drupalse_organizing_linked',
+      'format' => 'plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'field_url_url',
+      'table' => 'node_data_field_url',
+      'field' => 'field_url_url',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_logo_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 1,
+        'path' => '[field_url_url]',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '_blank',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'drupalse_organizing_default',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -935,7 +1058,7 @@ function cod_sponsors_views_default_views() {
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->override_option('fields', array(
-    'field_logo_fid' => array(
+    'field_url_url' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -956,11 +1079,52 @@ function cod_sponsors_views_default_views() {
         'strip_tags' => 0,
       ),
       'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'field_url_url',
+      'table' => 'node_data_field_url',
+      'field' => 'field_url_url',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_logo_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 1,
+        'path' => '[field_url_url]',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '_blank',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
       'hide_empty' => 1,
       'empty_zero' => 0,
-      'link_to_node' => 1,
+      'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'drupalse_logosmall_linked',
+      'format' => 'drupalse_logosmall_default',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
