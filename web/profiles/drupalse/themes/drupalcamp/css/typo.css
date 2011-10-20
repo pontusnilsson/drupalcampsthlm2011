@@ -4,7 +4,7 @@
 body {
   font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
-  line-height:1.4em;
+  line-height:150%;
   color:#333;
 }
 
@@ -13,8 +13,8 @@ body {
 }
 
 .eng-intro {
-
-
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 28px; 
 }
 
 #boxes-box-drupalse_awards img {
@@ -26,6 +26,7 @@ body {
  */
 h1 {
   font-size: 28px;
+  font-family: Helvetica,Arial,sans-serif;
   font-weight:bold;
   color:#323232;
   line-height: 1.2em;
