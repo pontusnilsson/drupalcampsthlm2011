@@ -14,11 +14,16 @@ body {
 
 .eng-intro {
   font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 28px; 
+  font-size: 28px;
+  line-height: 117%;
 }
 
 #boxes-box-drupalse_awards img {
+  width: 140px;
+}
 
+.pane-boxes-drupalse-awards h2.pane-title {
+  font-size:28px;
 }
 
 /**
