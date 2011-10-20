@@ -18,6 +18,11 @@ body {
   line-height: 117%;
 }
 
+.page-drupal-awards .addthis_toolbox {
+  margin:0 auto;
+  width:126px;
+}
+
 #boxes-box-drupalse_awards img {
   width: 140px;
 }
