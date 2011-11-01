@@ -714,3 +714,10 @@ html#jquery_ui_dialog #image_preview {
 .view-awards-nominated .view-content h3.title {
   margin-bottom:0.7em;
 }
+
+.session-calendar th {
+  text-align:center;
+}
+
+.drupalcamp-table td.session {
+}
