@@ -705,3 +705,7 @@ html#jquery_ui_dialog #image_preview {
   margin-right:1em;
   margin-bottom:1em;
 }
+
+.view-awards-nominated .view-content h2.title {
+  text-align:center;
+}
