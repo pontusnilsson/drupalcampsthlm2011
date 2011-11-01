@@ -692,6 +692,8 @@ html#jquery_ui_dialog #image_preview {
 .view-awards-nominated .node-item {
   margin-bottom:1em;
   clear:both;
+  border-bottom:1px solid #55A69E;
+  padding-bottom:1em;
 }
 
 .left {
