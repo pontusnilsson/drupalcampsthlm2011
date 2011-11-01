@@ -694,6 +694,7 @@ html#jquery_ui_dialog #image_preview {
   clear:both;
   border-bottom:1px solid #55A69E;
   padding-bottom:1em;
+  overflow:hidden;
 }
 
 .left {
