@@ -697,7 +697,7 @@ html#jquery_ui_dialog #image_preview {
   float:left;
 }
 
-.view-awards-nominated .node-item {
+.view-awards-nominated .node-item .image {
   margin-right:5px;
   margin-bottom:5px;
 }
