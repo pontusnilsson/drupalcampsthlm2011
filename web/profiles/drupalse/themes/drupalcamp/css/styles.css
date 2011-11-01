@@ -664,3 +664,27 @@ thead th {
   font-size: 12px;
 }
 
+
+html#jquery_ui_dialog .site-service,
+html#jquery_ui_dialog .site-header,
+html#jquery_ui_dialog .site-footer,
+html#jquery_ui_dialog .site-main #navigation
+{
+  display:none;
+}
+
+html#jquery_ui_dialog .site-main {
+  width:auto;
+}
+
+html#jquery_ui_dialog .container-14 {
+  width:auto;
+}
+
+html#jquery_ui_dialog body {
+  min-width:0;
+}
+
+html#jquery_ui_dialog #image_preview {
+  float:left;
+}
