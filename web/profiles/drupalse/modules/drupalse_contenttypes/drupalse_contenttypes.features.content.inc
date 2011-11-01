@@ -43,7 +43,7 @@ function drupalse_contenttypes_content_default_fields() {
     'widget_active' => '1',
     'type' => 'text',
     'required' => '1',
-    'multiple' => '0',
+    'multiple' => '1',
     'module' => 'text',
     'active' => '1',
     'text_processing' => '0',

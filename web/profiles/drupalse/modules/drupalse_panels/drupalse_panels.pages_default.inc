@@ -812,12 +812,11 @@ function drupalse_panels_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-1';
     $pane->panel = 'content';
-    $pane->type = 'form';
-    $pane->subtype = 'form';
+    $pane->type = 'block';
+    $pane->subtype = 'boxes-drupalse_awards';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'context' => 'context_node_add_form_1',
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -833,8 +832,8 @@ function drupalse_panels_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'content';
-    $pane->type = 'node_form_buttons';
-    $pane->subtype = 'node_form_buttons';
+    $pane->type = 'form';
+    $pane->subtype = 'form';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -853,12 +852,13 @@ function drupalse_panels_default_page_manager_pages() {
     $display->panels['content'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
-    $pane->panel = 'highlighted';
-    $pane->type = 'block';
-    $pane->subtype = 'boxes-drupalse_awards';
+    $pane->panel = 'content';
+    $pane->type = 'node_form_buttons';
+    $pane->subtype = 'node_form_buttons';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'context' => 'context_node_add_form_1',
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -868,32 +868,12 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $display->content['new-3'] = $pane;
-    $display->panels['highlighted'][0] = 'new-3';
+    $display->panels['content'][2] = 'new-3';
     $pane = new stdClass;
     $pane->pid = 'new-4';
-    $pane->panel = 'sidebar_left';
-    $pane->type = 'block';
-    $pane->subtype = 'addthis-0';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Spread the word about Swedish Drupal Awards 2011',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-4';
-    $pane = new stdClass;
-    $pane->pid = 'new-5';
-    $pane->panel = 'sidebar_left';
+    $pane->panel = 'content';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_awards2';
     $pane->shown = TRUE;
@@ -908,9 +888,58 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 3;
+    $display->content['new-4'] = $pane;
+    $display->panels['content'][3] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'DrupalCamp logo',
+      'title' => '',
+      'body' => '<img src="/profiles/drupalse/themes/drupalcamp/images/drupal-awards-black.png" alt="Drupal Awards" />',
+      'format' => '2',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'center',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
     $display->content['new-5'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-5';
+    $display->panels['sidebar_left'][0] = 'new-5';
+    $pane = new stdClass;
+    $pane->pid = 'new-6';
+    $pane->panel = 'sidebar_left';
+    $pane->type = 'block';
+    $pane->subtype = 'addthis-0';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'center',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1024,7 +1053,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_registerpromo';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array(
       'plugins' => array(
         0 => array(
@@ -1210,9 +1239,32 @@ function drupalse_panels_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-4';
     $pane->panel = 'sidebar_left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Sold out',
+      'title' => 'We\'re sold out',
+      'body' => 'Over 200 people have registered for DrupalCamp Stockholm, and unfortunately that\'s the limit of how many people we can host. There\'s a <a href="/waiting-list">waiting list</a> available in case of cancelations.',
+      'format' => '2',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar_left'][0] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
+    $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_registerpromo';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array(
       'plugins' => array(
         0 => array(
@@ -1237,11 +1289,11 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar_left'][0] = 'new-4';
+    $pane->position = 1;
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar_left'][1] = 'new-5';
     $pane = new stdClass;
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'addthis-0';
@@ -1257,15 +1309,15 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar_left'][1] = 'new-5';
+    $pane->position = 2;
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_left'][2] = 'new-6';
     $pane = new stdClass;
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'dcse_biljett_count-0';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
@@ -1277,11 +1329,11 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-6'] = $pane;
-    $display->panels['sidebar_left'][2] = 'new-6';
+    $pane->position = 3;
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_left'][3] = 'new-7';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_buyticket';
@@ -1320,11 +1372,11 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
-    $display->content['new-7'] = $pane;
-    $display->panels['sidebar_left'][3] = 'new-7';
+    $pane->position = 4;
+    $display->content['new-8'] = $pane;
+    $display->panels['sidebar_left'][4] = 'new-8';
     $pane = new stdClass;
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'user-0';
@@ -1340,11 +1392,11 @@ function drupalse_panels_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
-    $display->content['new-8'] = $pane;
-    $display->panels['sidebar_left'][4] = 'new-8';
+    $pane->position = 5;
+    $display->content['new-9'] = $pane;
+    $display->panels['sidebar_left'][5] = 'new-9';
     $pane = new stdClass;
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'sidebar_left';
     $pane->type = 'drupalse_twitter_content_type';
     $pane->subtype = 'drupalse_twitter_content_type';
@@ -1355,7 +1407,7 @@ function drupalse_panels_default_page_manager_pages() {
       'item2' => NULL,
       'override_title' => 1,
       'override_title_text' => 'DrupalCamp Tweets',
-      'tag' => '#drupalsthlm',
+      'tag' => '#drupalsthlm OR from:drupalsthlm OR to:drupalsthlm OR @drupalsthlm',
       'items' => '10',
     );
     $pane->cache = array();
@@ -1367,9 +1419,9 @@ function drupalse_panels_default_page_manager_pages() {
       'css_class' => 'twitter-pane',
     );
     $pane->extras = array();
-    $pane->position = 5;
-    $display->content['new-9'] = $pane;
-    $display->panels['sidebar_left'][5] = 'new-9';
+    $pane->position = 6;
+    $display->content['new-10'] = $pane;
+    $display->panels['sidebar_left'][6] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1385,18 +1437,7 @@ function drupalse_panels_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'schedule';
   $page->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 3,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
     'type' => 'none',
     'settings' => NULL,
@@ -1541,7 +1582,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'content';
     $pane->type = 'views_panes';
-    $pane->subtype = 'sessions-panel_pane_2';
+    $pane->subtype = 'sessions-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1581,7 +1622,7 @@ function drupalse_panels_default_page_manager_pages() {
     $pane->panel = 'sidebar_left';
     $pane->type = 'block';
     $pane->subtype = 'boxes-drupalse_registerpromo';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array(
       'plugins' => array(
         0 => array(

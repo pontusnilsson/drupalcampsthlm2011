@@ -14,7 +14,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'Swedish Drupal Awards 2011';
   $box->description = 'DrupalCamp Awards';
   $box->options = array(
-    'body' => '<p><strong>The Swedish Drupal Awards are awarded in the categories of best Swedish Drupal website, Swedish drupalist of the year, Swedish Drupal design of the year and Swedish Drupal technology of year. Further details in Swedish below.</strong></p>
+    'body' => '<p class="eng-intro">The Swedish Drupal Awards are awarded in the categories of best Swedish Drupal website, Swedish drupalist of the year, Swedish Drupal design of the year and Swedish Drupal technology of year. Further details in Swedish below.</p>
 <p>
 <table style="text-align:center">
 <td><img src="/profiles/drupalse/themes/drupalcamp/images/drupal-awards-site.png" alt="Årets svenska webbplats"><br /><strong>Årets svenska webbplats</strong></td>
@@ -23,7 +23,7 @@ function drupalse_boxes_default_box() {
 <td><img src="/profiles/drupalse/themes/drupalcamp/images/drupal-awards-tech.png" alt="Årets svenska teknik"><br /><strong>Årets svenska teknik</strong></td>
 </table>
 </p>
-<p>Äntligen! Nu är det dags att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:</p><ul><li>Årets svenska webbplats</li><li>Årets svenska drupalist</li><li>Årets svenska design</li><li>Årets svenska teknik</li></ul><p>Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats?&nbsp;</p><p>Grundförutsättningar för att kunna nomineras är:</p><ul><li>Det ska ha med Drupal att göra</li><li>Det ska vara svenskt</li><li>Det ska varit aktuellt under året</li><li>Det ska inte ha vunnit tidigare</li></ul><p>Nomeneringsprocessen är öppen och sker här på DrupalCamps webb. Välkommen att nominera!</p>',
+<p>Äntligen! Nu är det dags att lyfta fram de riktigt bra och kreativa lösningarna som skapats med Drupal under året. Vi har fyra kategorier:</p><ul><li>Årets svenska webbplats</li><li>Årets svenska drupalist</li><li>Årets svenska design</li><li>Årets svenska teknik</li></ul><p>Kategorierna är ganska öppna och det är upp till oss i gemenskapen att bestämma vad som hör hemma inom design och teknik. Teknik kanske är en bra svenskutvecklad modul eller en kreativ teknisk lösning? Årets design kanske är ett stiligt tema eller en snygg och användarvänlig webbplats?&nbsp;</p><p>Grundförutsättningar för att kunna nomineras är:</p><ul><li>Det ska ha med Drupal att göra</li><li>Det ska vara svenskt</li><li>Det ska varit aktuellt under året</li><li>Det ska inte ha vunnit tidigare</li></ul><p>Nomineringsprocessen är öppen och sker här på DrupalCamps webb. Sista datum för nominering är <strong>1 november</strong>. Välkommen att nominera!</p>',
     'format' => '2',
   );
   $export['drupalse_awards'] = $box;
@@ -36,7 +36,7 @@ function drupalse_boxes_default_box() {
   $box->title = 'Vad händer sen?';
   $box->description = 'DrupalCamp Awards 2';
   $box->options = array(
-    'body' => '<p>En kommitté bestående av styrgruppen för DrupalCamp Stockholm 2011 utser sedan tävlingsbidrag inom varje kategori. Anledningen till att det är en modererad urvalsprocess är för att få en variation och bredd bland tävlingsbidragen samt att det kan bli för mycket att gå igenom för en besökare. Besökarnas röst är viktigare för att utse vinnarna.</p><p>Tävlingsbidragen kommer att presenteras på DrupalCamps webbplats innan DrupalCamp går av stapeln så besökarna får tid att titta igenom och fundera.</p><p>Tävlingen avgörs sedan genom röstning bland besökarna på DrupalCamp, så se till att komma dit och göra din röst hörd!</p><p>Läs mer om bakgrund och diskution om Swedish Drupal Awards 2001 på <a href="http://groups.drupal.org/node/178154">g.d.o.</a></p>',
+    'body' => '<p>En kommitté bestående av styrgruppen för DrupalCamp Stockholm 2011 utser sedan tävlingsbidrag inom varje kategori. Anledningen till att det är en modererad urvalsprocess är för att få en variation och bredd bland tävlingsbidragen samt att det kan bli för mycket att gå igenom för en besökare. Besökarnas röst är viktigare för att utse vinnarna.</p><p>Tävlingsbidragen kommer att presenteras på DrupalCamps webbplats innan DrupalCamp går av stapeln så besökarna får tid att titta igenom och fundera.</p><p>Tävlingen avgörs sedan genom röstning bland besökarna på DrupalCamp, så se till att komma dit och göra din röst hörd!</p><p>Läs mer om bakgrund och diskussion om Swedish Drupal Awards 2001 på <a href="http://groups.drupal.org/node/178154">g.d.o.</a></p>',
     'format' => '2',
   );
   $export['drupalse_awards2'] = $box;
