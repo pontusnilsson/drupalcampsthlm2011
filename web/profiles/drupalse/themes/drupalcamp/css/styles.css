@@ -691,6 +691,7 @@ html#jquery_ui_dialog #image_preview {
 
 .view-awards-nominated .node-item {
   margin-bottom:1em;
+  clear:both;
 }
 
 .left {
@@ -698,6 +699,6 @@ html#jquery_ui_dialog #image_preview {
 }
 
 .view-awards-nominated .node-item .image {
-  margin-right:5px;
-  margin-bottom:5px;
+  margin-right:1em;
+  margin-bottom:1em;
 }
