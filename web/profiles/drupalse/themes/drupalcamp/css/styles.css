@@ -688,3 +688,16 @@ html#jquery_ui_dialog body {
 html#jquery_ui_dialog #image_preview {
   float:left;
 }
+
+.view-awards-nominated .node-item {
+  margin-bottom:1em;
+}
+
+.left {
+  float:left;
+}
+
+.view-awards-nominated .node-item {
+  margin-right:5px;
+  margin-bottom:5px;
+}
